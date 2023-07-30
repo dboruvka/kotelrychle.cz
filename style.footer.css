@@ -379,3 +379,116 @@
   border:0;
   background-color:transparent;
 }
+
+
+/* mobilní zobrazení */
+
+/* hlavička */
+
+@media (max-width: 767px) {
+
+
+  #header .site-name img /* loho */
+  {
+    padding-bottom:0 !important;
+    max-width: 145px !important;
+    margin-top: 10px !important;
+  }
+  
+
+
+  /* .responsive-tools>a[data-target="search"]
+{
+visibility: hidden;
+} */
+
+.responsive-tools>a[data-target="navigation"]::before
+{
+  color:black;
+  background-color: transparent;
+}
+
+
+
+.responsive-tools>a[data-target="navigation"]::before
+{
+border-radius: unset;
+font-size:150%;
+}
+
+.responsive-tools>a::before
+{
+  width: 40px;
+  line-height: 40px;
+}
+
+#header .site-name img
+{
+  padding-bottom:0 !important;
+  max-width: 145px !important;
+  margin-top: 10px !important;
+}
+
+/* navigace*/
+
+
+
+
+#navigation
+{
+  background-color: transparent !important; 
+}
+
+.navigation-in
+{
+  background-color: var(--db-primary);
+  margin-top:60px;
+}
+
+.navigation-close
+{
+  background-color: var(--db-primary);  
+  height: 60px;
+}
+
+.navigation-in>ul>li
+{
+  border-color: rgba(207, 207, 207, 0.37) !important;
+}
+
+
+.navigation-in a
+{
+  color: white !important;
+}
+
+.navigation-close::before
+{
+  color: white;
+}
+
+.navigation-in>ul>li>a>b
+{
+  font-weight: normal !important;
+}
+
+/* mobilní zobrazení  - konec*/
+
+
+#navigation li a[data-testid="signin"]::before
+{
+
+  content: url(uzivatel.svg);
+  fill: white;
+  width: 20px;
+  margin-right:15px;
+  vertical-align:middle;
+  display:inline-block;
+  filter: invert(100%);
+
+ 
+}
+
+ 
+
+}
