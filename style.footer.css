@@ -1,0 +1,361 @@
+﻿:root
+{
+  --db-primary: rgb(158, 0, 0);
+  --db-secondary: #360000;
+  }
+  
+/*
+@import "media/signature.css";
+@import "media/style.css";
+@import "media/separate.css";
+  @import "media/style-ms.css"; 
+ @import "media/assets/css/styles.css";  */
+
+
+ /* hlavička */
+
+ @media (min-width: 768px)
+ {
+
+
+  /* horní kontakty */
+  
+    .top-navigation-bar /* smaž horní kontakty */
+  {
+    border: 0;
+  }
+
+  .top-navigation-bar-menu li::before
+  
+  {
+ content: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+  .top-navigation-bar .top-navigation-contacts
+  {
+    display: none !important;
+  }
+
+/* horní menu */
+
+
+/* .top-navigation-bar a, .top-navigation-bar .dropdown button {
+  color:#5d5d5d;
+  font-weight: bold;
+  text-transform: none;
+  font-size: 14px;
+
+}
+
+.top-navigation-bar-menu li a, .top-navigation-bar-menu-helper li a
+{
+  padding: 0px 10px;
+}
+
+.top-navigation-bar .container>div
+{
+  flex-grow: 1;
+  flex-basis: content;
+}
+
+.top-navigation-bar .container > div:last-child, .top-navigation-bar .container>div:first-child
+ {
+  flex-basis: 100px;
+ }
+
+  */
+
+
+/* 
+  .top-navigation-bar-menu, .top-navigation-bar-menu-helper
+{
+  flex-grow: 1;  
+} */
+
+  /* vyhledávání  */
+  .compact-form .btn
+  {
+    top:8px;
+    line-height: normal;
+    height: 20px;
+    padding: 0px 10px 0px 10px;
+  }
+
+  #header .js-search-input {
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(123, 123, 123);
+        border-radius: 14px;
+        background-color: rgb(255, 255, 255);
+
+    
+      } 
+
+      
+      #formSearchForm .search-input
+      {
+        background-image: url(search.png);
+        
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        padding-left: 38px;
+
+      }
+
+
+    #header .search button {
+      background-color: transparent;
+      color: #777777;
+      font-size: 14px;
+      font-weight: bold;
+      /* line-height: 1.2; */
+      text-transform: unset;
+      border:0;
+      border-left: 1px solid;
+     
+            }  
+
+/*  navigace */
+#navigation
+{
+  height: 48px;
+}
+
+  .navigation-in>ul>li
+      {
+        border: 0;
+      }
+
+      .navigation-in
+      {
+        background-color: var(--db-primary);
+        font-weight: bold;
+        font-size: 17px;
+        line-height:30px;
+      }
+
+        .fitted .navigation-in ul
+        {
+          justify-content: space-around;
+        }
+
+        /* logo*/
+        
+
+        .sticky-mobile:not(.ordering-process) #header .site-name img
+        {
+          max-height: 55px;
+        }
+
+        .sticky-mobile:not(.ordering-process)  #header .site-name
+        {
+          margin-top: 5px;
+          height: 80px;
+        }
+        
+        .header-top .site-name-wrapper
+        {
+           flex-basis: 300px !important;
+        }
+        
+        
+        
+
+
+        .st-big-logo #header .site-name
+        {
+          height: 100px;  
+        }
+        
+        
+        .st-big-logo #header .site-name a img
+      {
+        height: 100px;
+        max-height:100px;
+      }
+
+      /* přihlášení */
+      .navigation-buttons
+      {
+        margin-left: 60px !important;
+        flex-basis:auto !important;
+      }
+      
+      
+      .navigation-buttons>a:not(.cart-count)
+      {
+        display: block;
+      }
+     
+      .navigation-buttons a[data-target="login"]
+      {
+        background-color: transparent;
+        color: black;
+        font-size:16px;
+        font-weight: bold;
+        margin-right: 25px;
+
+        }
+      
+      
+      
+      
+        .navigation-buttons>a:not(.cart-count)
+        {
+          width: auto;
+          height: 52px;
+        }
+
+        .navigation-buttons>a[data-target="login"]::before
+        {
+          
+          content: url(uzivatel.svg);
+          width: 30px;
+          margin-right:20px;
+          vertical-align:middle;
+          display:inline-block
+        }
+        .navigation-buttons a[data-target="login"]:hover
+        {
+          background-color: transparent;
+          color: var(--db-primary);
+        }
+    
+    
+    
+    /* hlavička - konec */
+    
+        /* patička */
+
+        #footer .conteiner-max-width,
+        #footer .conteiner-max-width2
+        {
+          width:auto;
+          margin: auto;
+          background-color: var(--db-primary);
+        }
+        #footer .conteiner-max-width2
+        {
+          background-color: var(--db-secondary);
+        }
+
+
+        #footer .footer-bottom
+        {
+          height: 70px;
+          background-color: var(--db-secondary);
+          color:white;
+        }
+
+        #footer .footer-rows
+        {
+          background-color: var(--db-primary);
+          
+        }
+
+        #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6
+        {
+          text-transform: none;
+          font-weight: bold;
+        }
+
+        #footer h4
+        {
+        font-size: 17px;
+          
+        }
+
+
+        #footer .contact-box a, #footer .password-helper a, #footer .news-item-widget a, #footer ul a,
+        #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6,
+        .contact-box ul li>span::before,#signature a
+        {
+          color:white;
+        }
+        .custom-footer, .footer-bottom, .footer-links-icons
+        {
+          border: 0;
+        }
+        
+
+    /* patička  konec */
+    
+    
+    
+      }
+
+    @media (min-width: 992px)
+    {
+      /* přihlášení pop-up */
+        .popup-widget.login-widget {
+          top: 90px;
+      }
+
+      .header-top .search {
+        
+        flex-basis: 300px !important;
+       }
+       
+       
+
+      
+    }
+    
+    
+    @media (min-width: 1200px) {
+      .header-top .search {
+        
+        flex-basis: 400px !important;
+       }
+  }
+
+
+@media (min-width: 1440px)
+{
+      /* přihlášení pop-up */
+
+      .header-top .search {
+        
+        flex-basis: 570px !important;
+         
+         
+       }
+
+      .popup-widget {
+    margin-left: 10px;
+}
+
+
+}
+
+
+    /* navigace - košík*/
+
+.navigation-buttons a[data-target="cart"]
+{
+  color: black;
+  font-weight: bold;
+}
+
+.btn.cart-count::before, a.btn.cart-count::before {
+          content: url(kosik.svg);
+        }
+
+
+/* content    */
+
+.homepage-box
+{
+  border:0;
+  background-color:transparent;
+}
