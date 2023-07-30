@@ -237,6 +237,20 @@
     
         /* patička */
 
+        .footer-rows .site-name a img
+        {
+          display: none;
+        }
+
+        /*konkurenčí výhody*/
+        .benefitBanner__item 
+        {
+          flex-direction: column;
+          padding-bottom: 40px;         
+          border-bottom: 2px solid hsla(0, 0%, 100%, 0.2);
+        }
+
+
         #footer .conteiner-max-width,
         #footer .conteiner-max-width2
         {
@@ -278,7 +292,8 @@
 
         #footer .contact-box a, #footer .password-helper a, #footer .news-item-widget a, #footer ul a,
         #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6,
-        .contact-box ul li>span::before,#signature a
+        .contact-box ul li>span::before,#signature a,
+        .benefitBanner__content
         {
           color:white;
         }
@@ -316,6 +331,11 @@
       .header-top .search {
         
         flex-basis: 400px !important;
+       }
+
+       .custom-footer
+       {
+        padding-top: 10px;
        }
   }
 
