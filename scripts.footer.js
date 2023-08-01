@@ -13,5 +13,7 @@ $("#footer .footer-bottom").wrapAll('<div class="conteiner-max-width2"></div>');
 
 
 
+//$('.slider-header  .to').after('<span class="db-az">až</span>');
+//$('.slider-header').insertAfter('.slider-wrapper');
 
 });
