@@ -30,6 +30,22 @@ body
 
 /* obecné  konec*/
 
+
+/* detail */
+
+.stars-info-wrapper
+{
+display: flex; 
+column-gap:  2em;
+}
+
+.stars-info-wrapper > .stars-wrapper
+{
+  
+}
+
+
+
 /* sidebar  */
 
  .sidebar,.filter-sections /*možná not mobil */
