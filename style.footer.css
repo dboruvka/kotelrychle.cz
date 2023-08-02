@@ -7,6 +7,11 @@
 
 /* obecné  */
 
+.btn.btn-conversion, a.btn.btn-conversion, .btn.btn-cart, a.btn.btn-cart
+{
+  border:0;
+}
+
 h1, h2, h3, .h1, .h2, .h3
 {
 color: var(--db-primary);
@@ -33,18 +38,184 @@ body
 
 /* detail */
 
-.stars-info-wrapper
+/* detail - doporučujeme */
+h2.p-related-head,
+.p-related-text
+{
+  color:black;
+}
+h2.p-related-head
+{
+margin-bottom: 1rem;
+}
+
+
+/* detail - breadcrumbs */
+.breadcrumbs 
+{
+  background-color: transparent; 
+  border:0;
+  font-size: 15px;
+  text-transform: none;
+  font-weight: 600;
+}
+
+.breadcrumbs, #navigation-1 a
+{
+  font-size: 15px;
+  text-transform: none;
+  font-weight: bold;
+  color: #6c6c6c;
+}
+
+.breadcrumbs, #navigation-2
+{
+  font-weight: normal;
+}
+
+/* detail - cena */
+.price-final-wrapper
+{
+display: flex;
+flex-direction: row;
+align-items:baseline;
+column-gap: 40px;
+}
+
+.type-product .price-additional, .type-product .price-measure
+{
+font-size: 14px;
+color: #373737;
+}
+
+.shipping-options
+{
+  font-size: 12px;
+}
+
+.type-product .availability-value
+.type-product h1,
+.type-product .stars-info-wrapper,
+.type-product .p-info-wrapper .availability-value,
+.type-product  .p-info-wrapper .detail-parameters
+{ 
+  /*  resent nastavení */ 
+  margin-top:0;
+  margin-bottom:0;
+}
+
+.type-product .detail-contact-button
+{
+  margin-top: 10px;
+  background-color: transparent !important;
+}
+
+.type-product .availability-value
+{
+margin-top: 20px !important;
+text-transform: uppercase;
+font-size: 16px;
+font-weight: bold;
+color:#2f9607;
+}
+
+.type-product .detail-parameters
+{
+  color: var(--db-primary);
+}
+
+.type-product .quantity
+{
+display: none;
+}
+
+.stars-label /* hvězdíčky */
+{
+line-height: 17px;  
+}
+
+.stars, 
+#rate-form .stars /* hodnocení dole*/
+{
+  width: 130px;
+  height:22px;
+}
+
+.stars a, .stars span
+{
+width: 20px;  
+height: 18px;
+margin-right:3px;
+}
+
+.stars.stars a::before, .stars.stars span::before
+{
+font-size: 20px !important;
+line-height: 20px;
+}
+
+
+.type-product .p-final-price-wrapper
+{
+  margin-top: 25px !important;  
+}
+
+
+.type-product  p[data-testid="productCardDescr"] {
+  display: none !important;
+}
+
+.type-product .btn.add-to-cart-button
+{
+  background-color: var(--db-primary);
+    border-radius: 5px;
+    height: 58px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.type-product .btn.add-to-cart-button::before
+{
+  content: url(kosik.svg);
+  width: 30px;
+  margin-right:20px;
+  vertical-align:middle;
+  display:inline-block ;
+  filter: invert(100%);
+}
+
+.social-buttons-wrapper
+{
+  background-color: white !important;
+  margin-top: 0;
+  justify-content:end;
+  }
+
+  .p-info-wrapper
+  {
+    padding: 0;
+  }
+.p-info-wrapper-bg
+{
+  padding: 20px;
+background-color: #f8f8f8;
+}
+
+.p-code
+{
+  display: flex;
+  align-items: center;
+  column-gap:2px;
+
+}
+
+.stars-pinfo-wrapper
 {
 display: flex; 
-column-gap:  2em;
+column-gap:  25px;
+margin-bottom: 12px;
+
 }
-
-.stars-info-wrapper > .stars-wrapper
-{
-  
-}
-
-
 
 /* sidebar  */
 
@@ -707,3 +878,18 @@ font-size:150%;
 }
 
 
+/* pouze desktop*/
+
+@media (min-width: 1281px) { 
+
+  .type-product .btn.add-to-cart-button 
+  {
+    min-width: 344px;
+  }
+  
+  .type-product .p-detail-info
+  {
+    margin-top:20px;
+  }
+
+}
