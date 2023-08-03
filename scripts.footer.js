@@ -50,7 +50,15 @@ $(document).ready(function () {
     $(".detail-contact-button").insertAfter($(".p-info-wrapper-bg"));
 
     $(".products-related-header").replaceWith('<h2 class="p-related-head">Doporučujeme dokoupit</h2><p class="p-related-text">Další komponenty nemusíte jinde složitě shánět. Vše najdete u nás na jednom místě.</p>');    // Související produkty 
+    
+  }
 
+  if (dataLayer[0].shoptet.pageType === "category") {
+
+    $(".st-subcats  .subcategories  li").removeClass("col-xl-3").addClass("col-xl-4");
+    $(".st-subcats  .subcategories  li").removeClass("col-lg-3").addClass("col-lg-4");
+
+    
   }
 
 });

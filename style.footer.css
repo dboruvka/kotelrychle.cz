@@ -18,6 +18,12 @@ color: var(--db-primary);
 font-weight: 700;
 }
 
+h4, h5, h6,  .h4, .h5, .h6
+{
+  color: black;
+  font-weight: bold;
+}
+
 h1, .h1
 {
   font-size: 30px;
@@ -36,9 +42,163 @@ body
 /* obecné  konec*/
 
 
-/* detail */
+/*detail  a kategorie  */
 
-/* detail - doporučujeme */
+
+.st-subcats .subcategories li a {
+/*.st-subcats možná */
+  display: flex;
+  flex-direction: row;
+    border-radius: 5px;
+    border: 1px solid rgb(185, 185, 185);
+  align-items: center;
+  justify-content: baseline;
+  }
+  
+  .st-subcats .subcategories li a .image
+  {
+    width:55px;
+    height: auto;
+    margin: 0;
+  }
+
+  .subcategories.with-image li a .text
+  {
+    color: black;
+    justify-content:flex-start;
+  }
+
+  .category-top h4 
+  {
+    font-size: 18px ;
+  }
+
+
+  .products-inline.products-top
+  {
+    flex-direction: column;
+
+  }
+  .products-inline.products-top > div .p
+  {
+    flex-direction: row;
+    width: inherit;
+  }
+  .products-inline.products-top > div .p .p-in
+  {
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+  }
+
+  .products-inline.products-top > div .p .p-in  .availability
+{
+  display: none;
+}
+
+.products-inline > div .p .p-in .p-in-in
+{
+ flex-grow: 1;  
+}
+
+
+.category-header
+{
+  background-color:#ebebeb;
+    
+  }
+
+  .category-header input[type="radio"]+label
+{
+  margin-top:8px;
+  padding-top:10px;
+  padding-bottom:10px;
+  color:#5d5d5d;
+}
+
+.category-header input[type="radio"]:checked+label
+
+{
+  border-radius: 5px 5px 0 0;
+  background-color: rgb(255, 255, 255);
+  color:#5d5d5d;
+}
+
+.p .name
+{
+  font-weight: bold;
+}
+
+.products-block .ratings-wrapper .availability
+{
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.products-block .p-bottom .p-desc
+{
+font-size: 13px;
+color: black;
+}
+
+.btn.btn-cart
+{
+background-color: var(--db-primary);
+    border-radius: 5px;
+    font-weight: normal;
+  font-size: 16px;
+  padding: 8px 18px 8px 12px;
+  }
+
+  .btn.btn-cart::before
+{
+  content: url(kosik.svg);
+  width: 25px;
+  filter: invert(100%);
+  margin-right:11px;
+}
+
+.products>div
+{
+  border-color: #dddddd;
+}
+
+.products-block.products>div
+{
+  padding-bottom: 20px;
+}
+
+.price-additional, .price-measure
+{
+  color:#717171;
+}
+.price-final
+{
+  color: black;
+}
+
+.pagination>a
+{
+  border-radius: 5px;
+  
+}
+
+.pagination-link
+{
+
+    background-color: rgb(237, 237, 237);
+
+  }
+  
+
+
+  .products-block.products .p .price strong, .products-block.products .p .price span
+{
+
+  
+  font-size: 17px;
+}
+/* - doporučujeme */
 h2.p-related-head,
 .p-related-text
 {
@@ -58,6 +218,14 @@ margin-bottom: 1rem;
   font-size: 15px;
   text-transform: none;
   font-weight: 600;
+}
+
+.navigation-home-icon-wrapper::before
+{
+  content: url(home.svg);
+   width: 20px;
+  
+
 }
 
 .breadcrumbs, #navigation-1 a
@@ -305,7 +473,7 @@ top: 4px;
 }
 
 .ui-slider .ui-slider-range,.ui-slider-horizontal,
-.ui-slider, .slider-content
+.ui-slider, .slider-content 
 {
   background-color: var(--db-primary);
 }
@@ -397,6 +565,22 @@ background-color: #f8f8f8;
 
  @media (min-width: 768px)
  {
+
+  #content .btn.unveil-button
+  {
+  
+      border-radius: 5px;
+      background-color: rgb(55, 0, 0);
+  text-transform: lowercase;
+    }
+  
+  #content .btn.unveil-button::before
+  {
+  content: "+";
+  margin-right: 0.5em;
+  }
+  
+    
 
 
   /* horní kontakty */
@@ -693,7 +877,18 @@ background-color: #f8f8f8;
 /* kategorie  - konec*/
       }
 
-    @media (min-width: 992px)
+      @media (min-width: 480px)
+      {
+  
+        .products-inline.products-top>div
+        {
+         width: 100% !important;
+        }
+ 
+      }
+  
+
+      @media (min-width: 992px)
     {
       /* přihlášení pop-up */
         .popup-widget.login-widget {
@@ -704,14 +899,21 @@ background-color: #f8f8f8;
         
         flex-basis: 300px !important;
        }
-       
-       
 
+       
       
     }
     
     
     @media (min-width: 1200px) {
+
+      .products-inline.products-top>div.button-wrapper
+      {
+        text-align: left;
+        font-weight: bold;
+        font-size: 13px;
+      }
+
       .header-top .search {
         
         flex-basis: 400px !important;
@@ -721,6 +923,7 @@ background-color: #f8f8f8;
        {
         padding-top: 10px;
        }
+      
   }
 
 
