@@ -1,6 +1,22 @@
 $(document).ready(function () {
   //    $('#signature').append(' &amp; <a href="https://davidboruvka.cz/?utm_source=footer&amp;utm_medium=link&amp;utm_campaign=shoptet" target="_blank" title="Tvorba eshopů na shoptetu">David Borůvka</a>');
 
+  //if($('.admin-logged.type-detail').length){
+
+
+
+//  if( $('.exists_content').hasClass('exists_content') ){  
+  if( $('.admin-logged').length ) { 
+      console.log("jsem admin");
+    }
+    else
+    {
+      console.log("NE admin");
+    }
+
+
+
+
   $(".top-nav-button-login").insertBefore($(".cart-count")); // Přesuneme prvek před prvek .cart-count
 
   $(".benefitBanner").insertBefore($(".custom-footer")); // Přesuneme prvek před prvek .cart-count
