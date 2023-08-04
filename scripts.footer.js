@@ -1,11 +1,6 @@
 $(document).ready(function () {
-  //    $('#signature').append(' &amp; <a href="https://davidboruvka.cz/?utm_source=footer&amp;utm_medium=link&amp;utm_campaign=shoptet" target="_blank" title="Tvorba eshopů na shoptetu">David Borůvka</a>');
+     $('#signature').append(' &amp; <a href="https://davidboruvka.cz/?utm_source=footer&amp;utm_medium=link&amp;utm_campaign=shoptet" target="_blank" title="Tvorba eshopů na shoptetu">David Borůvka</a>');
 
-  //if($('.admin-logged.type-detail').length){
-
-
-
-//  if( $('.exists_content').hasClass('exists_content') ){  
   if( $('.admin-logged').length ) { 
       console.log("jsem admin");
     }
@@ -14,15 +9,9 @@ $(document).ready(function () {
       console.log("NE admin");
     }
 
-
-
-
   $(".top-nav-button-login").insertBefore($(".cart-count")); // Přesuneme prvek před prvek .cart-count
-
   $(".benefitBanner").insertBefore($(".custom-footer")); // Přesuneme prvek před prvek .cart-count
-
   $(".top-nav-button-login > span").addClass("visible-lg-inline-block");
-
   $("#footer .container").wrapAll('<div class="conteiner-max-width"></div>');
   $("#footer .footer-bottom").wrapAll(
     '<div class="conteiner-max-width2"></div>'
@@ -39,7 +28,7 @@ $(document).ready(function () {
     $(".p-detail-inner-header > .p-code").insertAfter($(".stars-wrapper")); // přesune náš kód
     //$(".stars-wrapper").wrap(".line-start"); // o
     $(".p-short-description").insertBefore(".p-final-price-wrapper");
-    $(".p-info-wrapper .stars-wrapper,  .p-info-wrapper .p-code").wrapAll("<div class='stars-pinfo-wrapper'></div>");  // obalí .stars-wrapper a .p-code do <div class='wrap-stars'>
+    $(".p-info-wrapper .stars-wrapper,  .p-info-wrapper .p-code").wrapAll("<div class='stars-pinfo-wrapper'></div>");  // obalí .stars-wrapper a .p-code do <ol class='wrap-stars'>
     
     $(".p-info-wrapper .stars-wrapper,  .p-info-wrapper .p-code").wrapAll("<div class='stars-pinfo-wrapper'></div>");  // obalí .stars-wrapper a .p-code 
    $(".p-final-price-wrapper .price-final,.p-final-price-wrapper .price-additional,.p-final-price-wrapper .price-measure").wrapAll("<div class='price-final-wrapper'></div>");  // obalí ceny, abych je mohl naformátovat do sloupce
@@ -51,14 +40,13 @@ $(document).ready(function () {
 
     $(".products-related-header").replaceWith('<h2 class="p-related-head">Doporučujeme dokoupit</h2><p class="p-related-text">Další komponenty nemusíte jinde složitě shánět. Vše najdete u nás na jednom místě.</p>');    // Související produkty 
     
+    // $(".detail-tabs-wrapper .extended-description").replaceWith('<h4>Technické parametry</h4');  // 
   }
 
   if (dataLayer[0].shoptet.pageType === "category") {
 
     $(".st-subcats  .subcategories  li").removeClass("col-xl-3").addClass("col-xl-4");
     $(".st-subcats  .subcategories  li").removeClass("col-lg-3").addClass("col-lg-4");
-
-    
-  }
+   }
 
 });
