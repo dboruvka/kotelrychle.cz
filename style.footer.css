@@ -45,7 +45,30 @@ body
 /*detail  a kategorie  */
 
 
+.in-web-zaruka
+{
+  background-color: var(--db-primary);
+  color: white;
+  padding: 20px;
+  margin-top: 80px;
+}
 
+.in-web-zaruka a
+{
+  color: white;
+}
+
+.in-web-zaruka p
+{
+margin-bottom: 0;
+}
+
+.in-web-zaruka h3,
+.in-web-zaruka h4
+{
+  font-size:20px;
+  color: white;
+}
 
 #description  .extended-description h3
 {

@@ -39,6 +39,10 @@ $(document).ready(function () {
     $(".detail-contact-button").insertAfter($(".p-info-wrapper-bg"));
 
     $(".products-related-header").replaceWith('<h2 class="p-related-head">Doporučujeme dokoupit</h2><p class="p-related-text">Další komponenty nemusíte jinde složitě shánět. Vše najdete u nás na jednom místě.</p>');    // Související produkty 
+
+    // přidání článků z rubriky in-web do webu
+    $(".extended-description .detail-parameters").after("<div class='in-web-zaruka'></div>"); // vloží nový div
+    $(".in-web-zaruka").load("/in-web/zaruka-a-servis/ .content-inner .text "); // nahraj článek
     
     // $(".detail-tabs-wrapper .extended-description").replaceWith('<h4>Technické parametry</h4');  // 
   }
@@ -47,6 +51,13 @@ $(document).ready(function () {
 
     $(".st-subcats  .subcategories  li").removeClass("col-xl-3").addClass("col-xl-4");
     $(".st-subcats  .subcategories  li").removeClass("col-lg-3").addClass("col-lg-4");
-   }
 
-});
+// přidání článků z rubriky in-web do webu
+//$(".box-filters").after("<div class='in-web-rozumime'></div>"); // vloží nový div
+//$(".in-web-rozumime").load("/in-web/nasemu-zbozi-rozumime/ .content-inner .text "); // nahraj článek
+
+
+  }
+
+
+  });
