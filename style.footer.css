@@ -45,6 +45,156 @@ body
 /*detail  a kategorie  */
 
 
+
+.type-detail .in-web-rozumime
+{
+  margin-top: 20px;
+  margin-left: 25px;
+  color:black;
+}
+
+.type-detail .in-web-rozumime ul
+{
+margin:0;
+padding: 0; 
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  /* column-gap:50px; */
+  align-items:flex-start;
+  
+  
+}
+
+
+ .type-detail .in-web-rozumime ul li::before
+{ 
+ width: auto;
+height: 42px;
+float: left;
+margin-right: 10px;
+
+}  
+
+.type-detail .in-web-rozumime ul li:first-child::before
+{ 
+content: url(smartphone.png);
+margin-left: 20px;
+}
+
+.type-detail .in-web-rozumime ul li:nth-child(2)::before
+{ 
+content: url(zavinac.png);
+}
+
+
+
+.type-detail .in-web-rozumime  li
+{
+  flex-basis: 215px;
+}
+
+
+
+.type-detail .in-web-rozumime h4,
+.type-detail .in-web-rozumime h3
+{
+  font-size: 18px;
+  margin-bottom:0.5em !important;
+}
+
+.type-detail .in-web-rozumime  p
+{
+  font-size: 14px;
+  
+
+}
+
+
+.type-detail .in-web-rozumime strong
+{
+display: block;
+
+}
+
+
+.type-detail .in-web-rozumime em
+{
+font-size:11px;
+font-style: normal;
+display: block;
+
+}
+
+
+.type-detail .p-thumbnails a img
+{
+  border: 0;
+}
+
+.type-detail .p-thumbnail.highlighted::before
+{
+  background-color: transparent;
+}
+
+
+.type-detail .products-additional .product .p
+{
+  display: flex;
+  flex-direction: row;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(185, 185, 185);
+    border-radius: 5px;
+justify-content:flex-start;
+align-items: center;
+padding-top:5px;
+}
+
+.type-detail .products-additional + .browse-p
+{
+  display: none !important;
+}
+
+.type-detail .products-additional .product
+{
+  border:0 !important;
+  
+}
+
+.type-detail .products-additional .product .p .image
+{
+  width: 55px;
+}
+
+.type-detail .products-additional .product .p-in .p-in-in a
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:black;
+  font-weight: normal;
+  font-size:15px;
+
+  
+}
+
+
+.type-detail .products-additional .flags,
+.type-detail .products-additional .p-code,
+.type-detail .products-additional .p-bottom,
+.type-detail .products-additional .ratings-wrapper
+{
+display: none !important;
+}
+
+.type-detail .products-additional .products-block .image
+{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
 .in-web-zaruka
 {
   background-color: var(--db-primary);

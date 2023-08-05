@@ -22,10 +22,30 @@ $(document).ready(function () {
     $(".p-info-wrapper")
       .contents()
       .wrapAll('<div class="p-info-wrapper-bg"></div>');
-    $("h1").insertBefore($(".p-final-price-wrapper")); // přesune  nadpis do pravé části
-    $(".stars-wrapper").insertAfter("h1:first-child");
+    
+      if ($(".desktop").length)
+      {
+        $("h1").insertBefore($(".p-final-price-wrapper")); // přesune  nadpis do pravé části
+        $(".stars-wrapper").insertAfter("h1:first-child");
+      }
+      else
+      {
+        $(".stars-wrapper").insertAfter(".p-image-wrapper");
+      }   
+
+      $(".type-detail .products-additional .flags").remove();
+      $(".type-detail .products-additional .p-code").remove();
+      $(".type-detail .products-additional .p-bottom").remove();
+      $(".type-detail .products-additional .ratings-wrapper").remove();
+      
+      
     //    $(".p-detail-info > .stars-wrapper").insertAfter($("h1")); // přesune hodnocení pod H1
     $(".p-detail-inner-header > .p-code").insertAfter($(".stars-wrapper")); // přesune náš kód
+    //$(".p-detail-inner-header > .p-code > .p-code-label.span:contains('Kód:')").html('Náš kód:'); // přesune náš kód
+    $(".p-info-wrapper .p-code-label:contains('Kód:')").html('Náš kód:');
+    
+    //$(".category-header label:contains('Nejdražší')").html("Od nejdražšího");
+    
     //$(".stars-wrapper").wrap(".line-start"); // o
     $(".p-short-description").insertBefore(".p-final-price-wrapper");
     $(".p-info-wrapper .stars-wrapper,  .p-info-wrapper .p-code").wrapAll("<div class='stars-pinfo-wrapper'></div>");  // obalí .stars-wrapper a .p-code do <ol class='wrap-stars'>
@@ -42,8 +62,14 @@ $(document).ready(function () {
 
     // přidání článků z rubriky in-web do webu
     $(".extended-description .detail-parameters").after("<div class='in-web-zaruka'></div>"); // vloží nový div
-    $(".in-web-zaruka").load("/in-web/zaruka-a-servis/ .content-inner .text "); // nahraj článek
+    $(".in-web-zaruka").load("/in-web/detail-produktu-zaruka-a-servis/ .content-inner .text "); // nahraj článek
+
+       
+    $(".type-detail .detail-contact-button").replaceWith("<div class='in-web-rozumime'></div>");
+    $(".in-web-rozumime").load("/in-web/detail-produktu-nasemu-zbozi-rozumime/ .content-inner .text "); // nahraj článek
     
+
+
     // $(".detail-tabs-wrapper .extended-description").replaceWith('<h4>Technické parametry</h4');  // 
   }
 
