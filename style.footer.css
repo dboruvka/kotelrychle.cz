@@ -46,6 +46,85 @@ body
 
 
 
+
+.type-detail .p-detail-tabs,
+.type-detail .shp-tab.active,
+.type-detail .shp-tab-link
+
+{
+  color:#5d5d5d;
+  font-weight: bold;
+  background-color: #ebebeb;
+  
+}
+
+.type-detail .p-detail-tabs,
+.shp-tabs-holder .active,.shp-tab
+{
+margin:0 !important;
+padding: 0 !important;
+  text-align: center;
+}
+
+/* .shp-tab
+{
+  margin-top:10px;
+  margin-bottom:10px;
+} */
+
+.shp-tabs-holder ul.shp-tabs li a
+{
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+
+.type-detail .p-detail-tabs a
+{
+  color:#5d5d5d;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+
+.type-detail #p-detail-tabs a::after,
+.type-detail #p-detail-tabs .active a::after
+{
+
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  content: '';
+  bottom:-16px;
+  left:-50%;
+   position: relative;
+   
+ }
+
+
+.type-detail #p-detail-tabs .active a::after
+{  
+  border-bottom: 10px solid white;
+  }
+
+
+
+
+.type-detail .basic-description h2,
+.type-detail .basic-description h3,
+.type-detail .basic-description h4
+
+{
+  color: black;
+}
+
+
+
+.type-detail .shp-tabs-holder, .type-detail .shp-tabs
+{
+  background-color: #ebebeb !important;
+}
+
 .type-detail .in-web-rozumime
 {
   margin-top: 20px;
@@ -225,12 +304,6 @@ margin-bottom: 0;
   color:black;
 }
 
-#description  .extended-description h3
-{
-  
-}
-
-
   .products-inline.products-top>.product:first-child .p::before {content: "1.";} 
   .products-inline.products-top>.product:nth-child(2) .p::before {content: "2.";} 
   .products-inline.products-top>.product:nth-child(3) .p::before {content: "4."} 
@@ -238,7 +311,7 @@ margin-bottom: 0;
   .products-inline.products-top>.product:nth-child(5) .p::before {content: "6."} 
   .products-inline.products-top>.product:nth-child(6) .p::before {content: "7."} 
   .products-inline.products-top>.product:nth-child(7) .p::before {content: "8."} 
-  .products-inline.products-top>.product:nth-child(8) .p::before {content: "8."} 
+  .products-inline.products-top>.product:nth-child(8) .p::before {content: "9."} 
   
   
   
