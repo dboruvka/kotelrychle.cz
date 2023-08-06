@@ -23,7 +23,7 @@ $(document).ready(function () {
       .contents()
       .wrapAll('<div class="p-info-wrapper-bg"></div>');
     
-      if ($(".desktop").length)
+      if ($(".desktop").length) //desktop
       {
         $("h1").insertBefore($(".p-final-price-wrapper")); // přesune  nadpis do pravé části
         $(".stars-wrapper").insertAfter("h1:first-child");
@@ -31,6 +31,8 @@ $(document).ready(function () {
       else
       {
         $(".stars-wrapper").insertAfter(".p-image-wrapper");
+//        $(".description-inner").insertAfter(".p-detail-tabs");
+
       }   
 
       $(".type-detail .products-additional .flags").remove();
@@ -68,6 +70,8 @@ $(document).ready(function () {
     $(".type-detail .detail-contact-button").replaceWith("<div class='in-web-rozumime'></div>");
     $(".in-web-rozumime").load("/in-web/detail-produktu-nasemu-zbozi-rozumime/ .content-inner .text "); // nahraj článek
     
+
+
 
 
     // $(".detail-tabs-wrapper .extended-description").replaceWith('<h4>Technické parametry</h4');  // 

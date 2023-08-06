@@ -47,71 +47,6 @@ body
 
 
 
-.type-detail .p-detail-tabs,
-.type-detail .shp-tab.active,
-.type-detail .shp-tab-link
-
-{
-  color:#5d5d5d;
-  font-weight: bold;
-  background-color: #ebebeb;
-  
-}
-
-.type-detail .p-detail-tabs,
-.shp-tabs-holder .active,.shp-tab
-{
-margin:0 !important;
-padding: 0 !important;
-  text-align: center;
-}
-
-/* .shp-tab
-{
-  margin-top:10px;
-  margin-bottom:10px;
-} */
-
-.shp-tabs-holder ul.shp-tabs li a
-{
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
-
-
-.type-detail .p-detail-tabs a
-{
-  color:#5d5d5d;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-
-.type-detail #p-detail-tabs a::after,
-.type-detail #p-detail-tabs .active a::after
-{
-
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  content: '';
-  bottom:-16px;
-  left:-50%;
-   position: relative;
-   
- }
-
-
-.type-detail #p-detail-tabs .active a::after
-{  
-  border-bottom: 10px solid white;
-  }
-
-  .type-detail .shp-tabs-holder, .type-detail .shp-tabs
-  {
-    background-color: #ebebeb !important;
-  }
-
 
 .type-detail .basic-description h2,
 .type-detail .basic-description h3,
@@ -397,6 +332,8 @@ margin-bottom: 0;
   {
     color: black;
     justify-content:flex-start;
+    font-size:16px;
+    text-align: left !important;
   }
 
   .category-top h4 
@@ -959,6 +896,83 @@ background-color: #f8f8f8;
 
 /* sidebar - konec*/
 
+ /* patička */
+
+ .footer-rows .site-name a img
+ {
+   display: none;
+ }
+
+ /*konkurenčí výhody*/
+ .benefitBanner__item 
+ {
+   flex-direction: column;
+   padding-bottom: 40px;         
+   border-bottom: 2px solid hsla(0, 0%, 100%, 0.2);
+ }
+
+ #footer ul a:hover,
+ #footer .news-item-widget a:hover
+ {
+  color: white !important;
+ }
+
+ #footer .conteiner-max-width,
+ #footer .conteiner-max-width2
+ {
+   width:auto;
+   margin: auto;
+   background-color: var(--db-primary);
+ }
+ #footer .conteiner-max-width2
+ {
+   background-color: var(--db-secondary);
+ }
+
+
+ #footer .footer-bottom
+ {
+   min-height: 70px;
+   background-color: var(--db-secondary);
+   color:white;
+   font-size: 13px;
+ }
+
+ #footer .footer-rows
+ {
+   background-color: var(--db-primary);
+
+ }
+
+ #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6
+ {
+   text-transform: none;
+   font-weight: bold;
+ }
+
+
+ #footer h4
+ {
+ font-size: 17px;  
+ }
+
+
+
+ #footer .contact-box a, #footer .password-helper a, #footer .news-item-widget a, #footer ul a,
+ #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6,
+ .contact-box ul li>span::before,#signature a,
+ .benefitBanner__content
+ {
+   color:white;
+ }
+ .custom-footer, .footer-bottom, .footer-links-icons
+ {
+   border: 0;
+ }
+ 
+
+/* patička  konec */
+
  /* hlavička */
 
  @media (min-width: 768px)
@@ -1183,77 +1197,7 @@ background-color: #f8f8f8;
     
     /* hlavička - konec */
     
-        /* patička */
-
-        .footer-rows .site-name a img
-        {
-          display: none;
-        }
-
-        /*konkurenčí výhody*/
-        .benefitBanner__item 
-        {
-          flex-direction: column;
-          padding-bottom: 40px;         
-          border-bottom: 2px solid hsla(0, 0%, 100%, 0.2);
-        }
-
-
-        #footer .conteiner-max-width,
-        #footer .conteiner-max-width2
-        {
-          width:auto;
-          margin: auto;
-          background-color: var(--db-primary);
-        }
-        #footer .conteiner-max-width2
-        {
-          background-color: var(--db-secondary);
-        }
-
-
-        #footer .footer-bottom
-        {
-          height: 70px;
-          background-color: var(--db-secondary);
-          color:white;
-          font-size: 13px;
-        }
-
-        #footer .footer-rows
-        {
-          background-color: var(--db-primary);
-
-        }
-
-        #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6
-        {
-          text-transform: none;
-          font-weight: bold;
-        }
-
-
-        #footer h4
-        {
-        font-size: 17px;  
-        }
-
-
-
-        #footer .contact-box a, #footer .password-helper a, #footer .news-item-widget a, #footer ul a,
-        #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6,
-        .contact-box ul li>span::before,#signature a,
-        .benefitBanner__content
-        {
-          color:white;
-        }
-        .custom-footer, .footer-bottom, .footer-links-icons
-        {
-          border: 0;
-        }
-        
-
-    /* patička  konec */
+       
     
     
     /* kategorie */
@@ -1469,6 +1413,261 @@ font-size:150%;
   {
     margin-top:20px;
   }
+
+}
+
+
+
+
+@media (min-width: 768px)   
+{
+
+
+.type-detail .p-detail-tabs,
+.type-detail .shp-tab.active,
+.type-detail .shp-tab-link
+
+{
+  color:#5d5d5d;
+  font-weight: bold;
+  background-color: #ebebeb;
+  
+}
+
+.type-detail .p-detail-tabs,
+.shp-tabs-holder .active,.shp-tab
+{
+margin:0 !important;
+padding: 0 !important;
+  text-align: center;
+}
+
+
+
+
+    .shp-tabs-holder ul.shp-tabs li a
+    {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+
+
+    .type-detail .p-detail-tabs a
+    {
+      color:#5d5d5d;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+
+    .type-detail #p-detail-tabs a::after,
+    .type-detail #p-detail-tabs .active a::after
+    {
+
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      content: '';
+      bottom:-16px;
+      left:-50%;
+      position: relative;
+      
+    }
+
+
+    .type-detail #p-detail-tabs .active a::after
+    {  
+      border-bottom: 10px solid white;
+      }
+
+      .type-detail .shp-tabs-holder, .type-detail .shp-tabs
+      {
+        background-color: #ebebeb !important;
+      }
+
+  }
+
+@media (max-width: 480px) { 
+
+  #footer .footer-bottom
+  {
+    height: auto;
+  }
+
+  .footer-bottom,
+  .copyright, 
+  #signature
+  {
+    margin: 5px !important;
+  padding: 5px !important;
+  }
+
+.custom-footer  div
+{
+  flex-basis:50%
+}
+
+
+
+/* tabs detail */
+.shp-tabs-holder ul.shp-tabs li a
+{
+  border:0;
+
+}
+
+.shp-tabs-holder .active,
+.shp-tabs-holder .shp-tab-link
+{
+  color: white !important;
+}
+
+.shp-tabs-holder, .shp-tabs,
+.shp-tabs-holder .shp-tab-link
+{
+  background-color: transparent;
+}
+.responsive-nav .visible-links
+{
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  row-gap:10px;
+  font-size:13px;
+}
+.shp-tabs-holder ul.shp-tabs li a
+{
+  /* padding: 0;
+  margin: 0; */
+}
+.shp-tabs-holder ul.shp-tabs li::after
+{
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-top: 7px solid white;
+  content: '';
+  float:left;
+  position: relative;
+  top:-20px;
+  left:90%;
+  margin-bottom:-14px;
+} 
+
+.products-related
+{
+  margin-bottom: 10px
+}
+/* .shp-tabs-holder ul.shp-tabs li a
+{
+  padding:0;
+margin:0;
+} */
+
+
+li.shp-tab,
+li.shp-tab.active
+{
+background-color:  #00395c;
+padding-left:1em;
+}
+
+.navigation-btn,
+.hidden-links
+{
+  display: none !important;
+}
+/* tab detail  - konec*/
+
+
+
+  .p-code
+  {
+    margin-top:0.5rem;
+    margin-left:10px;
+  }
+  
+  .link-icons
+  {
+    display: none !important;
+  }
+
+  .p-info-wrapper-bg
+  {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .p-short-description
+  {
+    font-size: 14px;
+  }
+
+  .p-info-wrapper .price-final
+  {
+     font-size: 26px;
+  }
+
+  .price-final-wrapper
+  {
+    column-gap: 20px;
+  }
+
+
+  .p-info-wrapper .price-measure
+  {
+    display: none;
+  }
+
+  .type-product .p-info-wrapper .btn.add-to-cart-button
+  {
+    width: 95%;
+    margin: auto;
+  }
+
+  .in-web-zaruka h3, .in-web-zaruka h4
+  {
+    font-size:17px;
+    margin-bottom:0.5rem;
+    margin-top:0;
+  }
+  
+
+  .type-detail .in-web-rozumime
+  {
+    margin-left: 0;
+  }
+
+
+  .type-detail .in-web-rozumime ul
+  {
+    flex-direction: column;
+    
+  }
+
+  .type-detail .in-web-rozumime ul li:first-child::before
+  {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+
+  .type-detail .in-web-rozumime li
+  {
+    flex-basis: 60px;
+    width: 100%;
+  }
+
+  .in-web-zaruka p
+  {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .in-web-zaruka
+
+{
+  padding: 10px;
+}
 
 }
 
