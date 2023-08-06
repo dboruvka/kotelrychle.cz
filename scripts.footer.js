@@ -63,7 +63,7 @@ $(document).ready(function () {
     // přidání článků z rubriky in-web do webu
     $(".extended-description .detail-parameters").after("<div class='in-web-zaruka'></div>"); // vloží nový div
     $(".in-web-zaruka").load("/in-web/detail-produktu-zaruka-a-servis/ .content-inner .text "); // nahraj článek
-
+    
        
     $(".type-detail .detail-contact-button").replaceWith("<div class='in-web-rozumime'></div>");
     $(".in-web-rozumime").load("/in-web/detail-produktu-nasemu-zbozi-rozumime/ .content-inner .text "); // nahraj článek
@@ -77,6 +77,12 @@ $(document).ready(function () {
 
     $(".st-subcats  .subcategories  li").removeClass("col-xl-3").addClass("col-xl-4");
     $(".st-subcats  .subcategories  li").removeClass("col-lg-3").addClass("col-lg-4");
+
+    
+    $(".type-category .filters-wrapper").after("<div class='in-web-rozumime'></div>");
+    $(".in-web-rozumime").load("/in-web/kategorie-nasemu-zbozi-rozumime/ .content-inner .text "); // nahraj článek
+    
+
 
 // přidání článků z rubriky in-web do webu
 //$(".box-filters").after("<div class='in-web-rozumime'></div>"); // vloží nový div

@@ -107,32 +107,34 @@ padding: 0 !important;
   border-bottom: 10px solid white;
   }
 
-
+  .type-detail .shp-tabs-holder, .type-detail .shp-tabs
+  {
+    background-color: #ebebeb !important;
+  }
 
 
 .type-detail .basic-description h2,
 .type-detail .basic-description h3,
 .type-detail .basic-description h4
-
+.type-category .basic-description h2,
+.type-category .basic-description h3,
+.type-category .basic-description h4
 {
   color: black;
 }
 
 
 
-.type-detail .shp-tabs-holder, .type-detail .shp-tabs
-{
-  background-color: #ebebeb !important;
-}
-
-.type-detail .in-web-rozumime
+.type-detail .in-web-rozumime,
+.type-category .in-web-rozumime
 {
   margin-top: 20px;
   margin-left: 25px;
   color:black;
 }
 
-.type-detail .in-web-rozumime ul
+  .type-detail .in-web-rozumime ul,
+.type-category .in-web-rozumime ul
 {
 margin:0;
 padding: 0; 
@@ -141,12 +143,17 @@ padding: 0;
   list-style-type: none;
   /* column-gap:50px; */
   align-items:flex-start;
-  
-  
+}
+
+.type-category .in-web-rozumime ul
+{
+  flex-direction: column;
+  justify-content: center;  
 }
 
 
- .type-detail .in-web-rozumime ul li::before
+ .type-detail .in-web-rozumime ul li::before,
+ .type-category .in-web-rozumime ul li::before
 { 
  width: auto;
 height: 42px;
@@ -161,28 +168,40 @@ content: url(smartphone.png);
 margin-left: 20px;
 }
 
-.type-detail .in-web-rozumime ul li:nth-child(2)::before
+.type-category .in-web-rozumime ul li:first-child::before
+{ 
+  content: url(smartphone.png);
+  margin-right: 25px;
+}
+
+.type-detail .in-web-rozumime ul li:nth-child(2)::before,
+.type-category .in-web-rozumime ul li:nth-child(2)::before
 { 
 content: url(zavinac.png);
 }
-
-
 
 .type-detail .in-web-rozumime  li
 {
   flex-basis: 215px;
 }
 
-
+.type-category .in-web-rozumime  li
+{
+width: 220px;
+flex-basis: 65px;
+}
 
 .type-detail .in-web-rozumime h4,
-.type-detail .in-web-rozumime h3
+.type-detail .in-web-rozumime h3,
+.type-category .in-web-rozumime h4,
+.type-category .in-web-rozumime h3
 {
   font-size: 18px;
   margin-bottom:0.5em !important;
 }
 
-.type-detail .in-web-rozumime  p
+.type-detail .in-web-rozumime  p,
+.type-category .in-web-rozumime  p
 {
   font-size: 14px;
   
@@ -190,7 +209,10 @@ content: url(zavinac.png);
 }
 
 
-.type-detail .in-web-rozumime strong
+.type-detail .in-web-rozumime strong,
+.type-detail .in-web-rozumime em,
+.type-category .in-web-rozumime strong,
+.type-category .in-web-rozumime em
 {
 display: block;
 
@@ -201,7 +223,19 @@ display: block;
 {
 font-size:11px;
 font-style: normal;
-display: block;
+}
+
+.type-category .in-web-rozumime em
+
+{
+font-size:12px;
+font-style: normal;
+}
+
+.type-category .in-web-rozumime strong
+
+{
+font-size:15px;
 
 }
 
@@ -328,7 +362,7 @@ margin-bottom: 0;
         align-items: center;
         font-size: 14px;
         font-weight: bold;
-        margin-right: 40px;
+        margin-right: 20px;
         
       } 
              
@@ -385,7 +419,7 @@ margin-bottom: 0;
   {
     display: flex;
     flex-direction: row;
-    padding-left: 20px;
+    padding-left: 10px;
     width: calc(100% - 180px);
   }
   
@@ -757,7 +791,15 @@ margin-bottom: 12px;
 
 /* sidebar  */
 
- .sidebar,.filter-sections /*možná not mobil */
+ 
+.sidebar .filter-total-count,
+.sidebar .filter-total-count strong
+{
+color: #979797;
+font-weight: normal;
+}
+
+.sidebar,.filter-sections /*možná not mobil */
 {
   /* background-color: transparent; */
  font-size: 12px;
