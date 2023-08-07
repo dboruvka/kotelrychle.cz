@@ -32,10 +32,13 @@ $(document).ready(function () {
       {
         $(".stars-wrapper").insertAfter(".p-image-wrapper");
 //          $(".p-detail-tabs ul").removeClass("active");
-  
+ 
   $("#p-detail-tabs > li.shp-tab").removeClass("active");
   $("#tab-content > div").removeClass("active");
-//  $("#tab-content > div").css("color", "red");
+  $(".products-additional.p-switchable > div:nth-child(3)").removeClass("related-sm-screen-hide");
+  $(".products-additional.p-switchable > div:nth-child(4)").removeClass("related-sm-screen-hide");
+  
+  //  $("#tab-content > div").css("color", "red");
         
         
 //        $(".description-inner").insertAfter(".p-detail-tabs");

@@ -1300,13 +1300,6 @@ background-color: #f8f8f8;
 @media (max-width: 767px) {
 
 
-  #header .site-name img /* loho */
-  {
-    padding-bottom:0 !important;
-    max-width: 145px !important;
-    margin-top: 10px !important;
-  }
-  
 
 
   /* .responsive-tools>a[data-target="search"]
@@ -1489,6 +1482,18 @@ padding: 0 !important;
 
 @media (max-width: 480px) { 
 
+  .products-block.products>div
+  {
+    padding-bottom: 5px;
+  }
+  
+  #header .site-name img /* loho */
+  {
+    padding-bottom:0 !important;
+    max-width: 145px !important;
+    margin-top: 0px !important;
+  }
+
   #footer .footer-bottom
   {
     height: auto;
@@ -1535,11 +1540,7 @@ padding: 0 !important;
   row-gap:10px;
   font-size:13px;
 }
-.shp-tabs-holder ul.shp-tabs li a
-{
-  /* padding: 0;
-  margin: 0; */
-}
+
 .shp-tabs-holder ul.shp-tabs li::after
 {
   border-left: 7px solid transparent;
@@ -1601,6 +1602,7 @@ padding-left:1em;
   .p-short-description
   {
     font-size: 14px;
+    margin-top:1em;
   }
 
   .p-info-wrapper .price-final
