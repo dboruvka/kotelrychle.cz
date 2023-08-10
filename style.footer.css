@@ -41,11 +41,25 @@ body
 
 /* obecné  konec*/
 
+/* Menu */
+
+.navigation-in>ul>li.ext>ul>li>div>ul>li>a
+{
+  font-size: 14px !important;
+}
+
+.navigation-in>ul>li.ext>ul>li>div>a
+{
+  color: black;
+
+}
+
+/* .navigation-in ul.menu-level-2 li
+{
+  border-right: 1px solid  rgb(185, 185, 185);
+} */
 
 /*detail  a kategorie  */
-
-
-
 
 
 .type-detail .basic-description h2,
@@ -639,7 +653,8 @@ line-height: 17px;
 }
 
 .stars, 
-#rate-form .stars /* hodnocení dole*/
+#rate-form .stars, /* hodnocení dole*/
+.latest-contribution-info .stars /* na hp */
 {
   width: 130px;
   height:22px;

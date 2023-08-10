@@ -11,17 +11,8 @@ $(document).ready(function () {
 
   $(".top-nav-button-login").insertBefore($(".cart-count")); // Přesuneme prvek před prvek .cart-count
   
-  if ($("body.type-index").length)
-{
-      //$(".p-in-in").insertAfter(".ratings-wrapper");
-}
-else
+       
 
-      {
-        $('.benefitBanner').insertBefore($(".custom-footer")); // Přesuneme prvek před prvek .cart-count
-      }
-  
-  
   $(".top-nav-button-login > span").addClass("visible-lg-inline-block");
   $("#footer .container").wrapAll('<div class="conteiner-max-width"></div>');
   $("#footer .footer-bottom").wrapAll(
@@ -97,6 +88,17 @@ else
 
     // $(".detail-tabs-wrapper .extended-description").replaceWith('<h4>Technické parametry</h4');  // 
   }
+
+  
+  if (dataLayer[0].shoptet.pageType === "homepage") {
+    
+    //$this().$('.product div.p-in-in > a').insertAfter('.product div.p-in-in > .ratings-wrapper');
+    }
+      else
+      {
+            $('.benefitBanner').insertBefore($(".custom-footer")); // Přesuneme prvek před prvek .cart-count
+      }
+
 
   if (dataLayer[0].shoptet.pageType === "category") {
 
