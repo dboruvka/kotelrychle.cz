@@ -1,14 +1,6 @@
 $(document).ready(function () {
      $('#signature').append(' &amp; <a href="https://davidboruvka.cz/?utm_source=footer&amp;utm_medium=link&amp;utm_campaign=shoptet" target="_blank" title="Tvorba eshopů na shoptetu">David Borůvka</a>');
 
-  if( $('.admin-logged').length ) { 
-      console.log("jsem admin");
-    }
-    else
-    {
-      console.log("NE admin");
-    }
-
   $(".top-nav-button-login").insertBefore($(".cart-count")); // Přesuneme prvek před prvek .cart-count
   
        
@@ -19,8 +11,14 @@ $(document).ready(function () {
     '<div class="conteiner-max-width2"></div>'
   );
 
-  if (dataLayer[0].shoptet.pageType === "productDetail") {
+  if (dataLayer[0].shoptet.pageType === "productDetail") 
+  
+  {
     // detail produktu
+
+    
+  //$("span.flag-custom2:contains('Český produkt')").insertAfter(".availability-value");
+
     $(".p-info-wrapper")
       .contents()
       .wrapAll('<div class="p-info-wrapper-bg"></div>');
@@ -40,12 +38,19 @@ $(document).ready(function () {
   $(".products-additional.p-switchable > div:nth-child(3)").removeClass("related-sm-screen-hide");
   $(".products-additional.p-switchable > div:nth-child(4)").removeClass("related-sm-screen-hide");
   
+
+
+  
+  
+  
+
   //  $("#tab-content > div").css("color", "red");
         
         
 //        $(".description-inner").insertAfter(".p-detail-tabs");
 
       }   
+
 
       $(".type-detail .products-additional .flags").remove();
       $(".type-detail .products-additional .p-code").remove();
@@ -69,8 +74,19 @@ $(document).ready(function () {
 
     $(".social-buttons-wrapper").insertBefore(".p-info-wrapper-bg"); // prvek přidán kvůli bílému pozadí
     $(".availability-value").insertBefore(".p-final-price-wrapper");
+
+    
+    
+    
+
     $(".p-info-wrapper-bg .detail-parameters").insertBefore(".p-final-price-wrapper");
     $(".detail-contact-button").insertAfter($(".p-info-wrapper-bg"));
+
+$(".p-info-wrapper-bg > .availability-value, .p-info-wrapper-bg > .detail-parameters").wrapAll("<div class='detail-parametrs-wrapper'><div class='detail-parametrs-wrapper-skladem'></div></div>");  // obalí .stars-wrapper a .p-code 
+
+$("span.flag-custom2:contains('Český produkt')").insertAfter(".detail-parametrs-wrapper-skladem").text("Český výrobek");
+
+
 
     $(".products-related-header").replaceWith('<h2 class="p-related-head">Doporučujeme dokoupit</h2><p class="p-related-text">Další komponenty nemusíte jinde složitě shánět. Vše najdete u nás na jednom místě.</p>');    // Související produkty 
 
@@ -82,8 +98,7 @@ $(document).ready(function () {
     $(".type-detail .detail-contact-button").replaceWith("<div class='in-web-rozumime'></div>");
     $(".in-web-rozumime").load("/in-web/detail-produktu-nasemu-zbozi-rozumime/ .content-inner .text "); // nahraj článek
     
-
-
+    
 
 
     // $(".detail-tabs-wrapper .extended-description").replaceWith('<h4>Technické parametry</h4');  // 
@@ -92,15 +107,43 @@ $(document).ready(function () {
   
   if (dataLayer[0].shoptet.pageType === "homepage") {
     
-    //$this().$('.product div.p-in-in > a').insertAfter('.product div.p-in-in > .ratings-wrapper');
+  $("span.flag-custom2:contains('Český produkt')").each(function() {
+        var flag_remove = $(this).closest(".product").find(".p-in-in");
+      $(this).insertAfter(flag_remove).removeClass("flag").text("Český výrobek");
+    });
+
+    $(".ratings-wrapper").each(function() {
+      var remove = $(this).closest(".product").find(".p-in");
+    $(this).insertBefore(remove);
+  });
+
+
+
     }
       else
       {
             $('.benefitBanner').insertBefore($(".custom-footer")); // Přesuneme prvek před prvek .cart-count
       }
 
+    
+
 
   if (dataLayer[0].shoptet.pageType === "category") {
+
+
+
+    
+$("span.flag-custom2:contains('Český produkt')").each(function() {
+    var flag_remove = $(this).closest(".product").find(".p-in-in");
+  $(this).insertAfter(flag_remove).removeClass("flag").text("Český výrobek");
+});
+
+$(".product .ratings-wrapper").each(function() { // přesuň hvězdíčky nad nadpis
+  var remove = $(this).closest(".product").find(".p-in-in");
+  $(this).insertBefore(remove)
+});
+
+
 
     $(".st-subcats  .subcategories  li").removeClass("col-xl-3").addClass("col-xl-4");
     $(".st-subcats  .subcategories  li").removeClass("col-lg-3").addClass("col-lg-4");

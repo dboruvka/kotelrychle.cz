@@ -39,6 +39,53 @@ body
   color: var(--db-primary);
 }
 
+.flags-extra
+{
+  top: 2px;
+  right:15px;
+
+}
+
+[class~=blog-hp]:before
+{
+  content: "Poradna";
+  color: var(--db-primary) !important;
+  text-transform: none;  
+  font-weight: bold !important;
+}
+
+
+.welcome h1
+{
+text-align: center;
+}
+
+.blog-hp .title
+{
+color:black !important;
+font-weight: bold !important;
+font-size: 19px !important;
+
+}
+
+.blog-hp .description
+{
+  color: black !important;
+}
+
+.in-index .products-block .p-code
+{
+  top:85px;
+  right:0px;
+}
+
+h4.homepage-group-title, .h4.homepage-group-title
+{
+  color: var(--db-primary) !important;
+  margin-bottom: 60px;
+}
+
+
 /* obecné  konec*/
 
 /* Menu */
@@ -62,6 +109,47 @@ body
 } */
 
 /*detail  a kategorie  */
+
+
+
+.detail-parametrs-wrapper
+{
+  display: flex;
+  flex-direction: row;
+align-items: center;
+justify-content: space-between;  
+}
+
+.product .flag-custom2/* český produkt */
+{
+  display: flex;
+  flex-direction: row;
+align-items: center;
+
+}
+
+
+.detail-parametrs-wrapper .flag-custom2:before,/* český produkt */
+.product .flag-custom2:before/* český produkt */
+{
+  content: url(csv.png);
+  
+  float: left;
+  width: 66px;
+  height: auto;
+}
+
+.detail-parametrs-wrapper .flag-custom2,/* český produkt */
+.product .flag-custom2
+{
+  background-color: transparent !important;
+  color:black;
+font-size: 14px;
+min-width: 200px;
+display: flex;
+  align-items: center;
+  font-weight: bold;
+}
 
 
 .type-detail .basic-description h2,
@@ -291,12 +379,12 @@ margin-bottom: 0;
 
   .products-inline.products-top>.product:first-child .p::before {content: "1.";} 
   .products-inline.products-top>.product:nth-child(2) .p::before {content: "2.";} 
-  .products-inline.products-top>.product:nth-child(3) .p::before {content: "4."} 
-  .products-inline.products-top>.product:nth-child(4) .p::before {content: "5."} 
-  .products-inline.products-top>.product:nth-child(5) .p::before {content: "6."} 
-  .products-inline.products-top>.product:nth-child(6) .p::before {content: "7."} 
-  .products-inline.products-top>.product:nth-child(7) .p::before {content: "8."} 
-  .products-inline.products-top>.product:nth-child(8) .p::before {content: "9."} 
+  .products-inline.products-top>.product:nth-child(3) .p::before {content: "3."} 
+  .products-inline.products-top>.product:nth-child(4) .p::before {content: "4."} 
+  .products-inline.products-top>.product:nth-child(5) .p::before {content: "5."} 
+  .products-inline.products-top>.product:nth-child(6) .p::before {content: "6."} 
+  .products-inline.products-top>.product:nth-child(7) .p::before {content: "7."} 
+  .products-inline.products-top>.product:nth-child(8) .p::before {content: "8."} 
   
   
   
@@ -436,6 +524,7 @@ margin-bottom: 0;
 {
 font-size: 13px;
 color: black;
+/* height: auto; */
 }
 
 .btn.btn-cart
@@ -617,7 +706,7 @@ color: #373737;
 
 .type-product .availability-value
 {
-margin-top: 20px !important;
+/* margin-top: 20px !important; */
 text-transform: uppercase;
 font-size: 16px;
 font-weight: bold;
@@ -655,12 +744,21 @@ line-height: 17px;
 }
 
 .stars, 
-#rate-form .stars, /* hodnocení dole*/
+#rate-form .stars /* hodnocení dole*/
+{
+  width: 116px;
+  height:22px;
+}
+
+
 .latest-contribution-info .stars /* na hp */
 {
   width: 130px;
   height:22px;
 }
+
+
+
 
 .stars a, .stars span
 {
@@ -676,9 +774,9 @@ line-height: 20px;
 }
 
 
-.type-product .p-final-price-wrapper
+.type-product .detail-parametrs-wrapper
 {
-  margin-top: 25px !important;  
+  margin-bottom: 25px !important;  
 }
 
 
