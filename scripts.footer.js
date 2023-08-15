@@ -3,7 +3,50 @@ $(document).ready(function () {
 
   $(".top-nav-button-login").insertBefore($(".cart-count")); // Přesuneme prvek před prvek .cart-count
   
-       
+
+  $(".top-navigation-contacts").remove();
+  
+  //$(".top-navigation-bar-menu > li").addClass("cropped");
+   $(".top-navigation-bar-menu > li").removeClass("cropped");
+   $(".top-navigation-bar-menu-helper  > li").removeClass("cropped");
+  $(".top-navigation-bar-menu > li:gt(2)").addClass("cropped");
+
+
+// Procházíme všechny elementy v top-navigation-bar-menu ul li a
+$('ul.top-navigation-bar-menu li').each(function() {
+  // Uložíme si aktuální třídu
+  var currentClass = $(this).attr('class');
+  // Procházíme všechny elementy v top-navigation-bar-menu-helper li a
+  $('ul.top-navigation-bar-menu-helper li').each(function() {
+    // Porovnáme třídy
+    if ($(this).attr('class') == currentClass) {
+      // Přidáme třídu .noview k elementu s shodnou třídou
+      $(this).addClass('noview');
+    }
+  });
+});
+
+  
+  // $('.top-navigation-bar-menu-helper li').each(function() {
+  //   var className = $(this).attr('class');
+  //   var isNoView = $('.top-navigation-menu li').filter(function() {
+  //     return $(this).hasClass(className);
+  //   }).length > 0;
+  
+  //   if (isNoView) {
+  //     $(this).addClass('noview');
+  //   }
+  // });
+
+  
+
+
+
+//  $(".top-navigation-bar-menu > li").addClass("cropped");
+  // $(".top-navigation-bar-menu > li").removeClass("cropped");
+  //$(".top-navigation-bar-menu > li:gt(2)").removeClass("cropped");
+
+  
 
   $(".top-nav-button-login > span").addClass("visible-lg-inline-block");
   $("#footer .container").wrapAll('<div class="conteiner-max-width"></div>');
@@ -15,6 +58,44 @@ $(document).ready(function () {
   
   {
     // detail produktu
+
+    if ($(".p-final-price-wrapper .price-save").length)
+  {
+   
+    // $(".price-standard").filter(function() {
+    //   return $(this).parent().hasClass("p-final-price-wrapper");
+    // }).text("Nová cena");
+
+    var price_standard = $(".p-info-wrapper .p-final-price-wrapper > span.price-standard span").text();
+    
+    var price_standard_number =  price_standard.replace(",", "."); // změní string na číslo
+    var price_standard_number = Number(price_standard_number.match(/\d+\.\d+/));
+        //var price_standard_number = str.split("").filter(function(char) {return /\d|\./.test(char);});
+    var price = dataLayer[0].shoptet.product.priceWithVat;
+    var mena = dataLayer[0].shoptet.product.currency;
+    var usetreno =   price_standard_number - price;
+    usetreno = usetreno.toFixed(2);
+    if (mena == "CZK" )
+   {
+    mena = "Kč";
+    usetreno = '<span class="usetreno"> Ušetříte '+usetreno+ " " +mena+ '</span>';
+  }
+   else if (mena == "EUR" )
+   {
+    mena = "€";
+    usetreno = '<span class="usetreno"> Ušetříte '+mena+ +usetreno+ '</span>';
+   }
+   usetreno =  usetreno.replace(".", ","); // změní string na číslo
+
+   
+
+   $(".p-info-wrapper .p-final-price-wrapper > span.price-standard").before(usetreno);
+  }
+
+
+    $("#productsAlternative .products div").removeClass("inactive").addClass("active"); //podobné 
+
+    
 
     
   //$("span.flag-custom2:contains('Český produkt')").insertAfter(".availability-value");
@@ -38,7 +119,6 @@ $(document).ready(function () {
   $(".products-additional.p-switchable > div:nth-child(3)").removeClass("related-sm-screen-hide");
   $(".products-additional.p-switchable > div:nth-child(4)").removeClass("related-sm-screen-hide");
   
-
 
   
   
