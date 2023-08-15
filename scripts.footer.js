@@ -68,13 +68,50 @@ $('ul.top-navigation-bar-menu li').each(function() {
 
     var price_standard = $(".p-info-wrapper .p-final-price-wrapper > span.price-standard span").text();
     
-    var price_standard_number =  price_standard.replace(",", "."); // změní string na číslo
-    var price_standard_number = Number(price_standard_number.match(/\d+\.\d+/));
-        //var price_standard_number = str.split("").filter(function(char) {return /\d|\./.test(char);});
+        var price_standard_number =  price_standard.replace(",", "."); // změní string na číslo
+             
+        price_standard_number = price_standard_number.replace(/[^0-9.]/g, "");  
+    
+    //var price_standard_number = str.split("").filter(function(char) {return /\d|\./.test(char);});
     var price = dataLayer[0].shoptet.product.priceWithVat;
     var mena = dataLayer[0].shoptet.product.currency;
     var usetreno =   price_standard_number - price;
-    usetreno = usetreno.toFixed(2);
+    
+    
+
+    if (usetreno < 1000 &&  mena == "CZK" )
+    {
+      usetreno = usetreno.toFixed(2);
+    
+    }
+    else if (usetreno >= 1000 &&  mena == "CZK" )
+    {
+      usetreno = usetreno.toFixed(0);
+    
+    }
+    else if (usetreno > 100 &&  mena == "EUR" )
+    {
+      usetreno = usetreno.toFixed(0);
+    
+    } 
+    else if (usetreno <= 100 &&  mena == "EUR" )
+    {
+    
+      usetreno = usetreno.toFixed(2);
+    } 
+    else
+    {
+      usetreno = usetreno.toFixed(2);
+
+    }
+
+    
+    
+    usetreno = usetreno.split(/(?=(?:\d{3})+(?:\.|$))/g).join(' '); // naformátuje mezery
+
+
+
+
     if (mena == "CZK" )
    {
     mena = "Kč";
