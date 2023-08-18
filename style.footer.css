@@ -6,6 +6,16 @@
     
 
   /* obecné  */
+  
+  .has-detail-product-arrows .carousel-control--product.right:before,
+  .has-detail-product-arrows .carousel-control--product.left:before,
+  .carousel-control.right::before,
+  .carousel-control.left::before,
+  .has-detail-product-arrows .carousel-control--product.right, .has-detail-product-arrows .carousel-control--product.left
+  {
+    z-index: 100;
+  }
+
 
   .noview
   {
