@@ -4,7 +4,8 @@ $(document).ready(function () {
   
   if (dataLayer[0].shoptet.pageType === "cart")
   {
-    $(".top-nav-button-login").remove(); // Přesuneme prvek před prvek .cart-count
+    $(".top-nav-button-login").remove(); 
+    
   
   }
   else
