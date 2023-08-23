@@ -7,6 +7,12 @@
 
   /* obecné  */
   
+  .welcome-wrapper h1
+  {
+    display: none;
+  }
+  
+
   .has-detail-product-arrows .carousel-control--product.right:before,
   .has-detail-product-arrows .carousel-control--product.left:before,
   .carousel-control.right::before,

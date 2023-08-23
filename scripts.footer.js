@@ -83,7 +83,7 @@ $('ul.top-navigation-bar-menu li').each(function() {
       if (originalText.length > 57) {
         truncatedText += "…" // Přidáme tři tečky, pokud byl text zkrácen
       }
-      $(this).text(truncatedText);
+      $(this).text(truncatedText).attr("title", originalText);
     });
 
 
@@ -251,6 +251,10 @@ $("span.flag-custom2:contains('Český produkt')").insertAfter(".detail-parametr
 
   
   if (dataLayer[0].shoptet.pageType === "homepage") {
+
+
+    
+  $(".welcome-wrapper h1").remove();
     
   $("span.flag-custom2:contains('Český produkt')").each(function() {
         var flag_remove = $(this).closest(".product").find(".p-in-in");
