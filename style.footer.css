@@ -12,6 +12,16 @@
     display: none;
   }
   
+.in-index  .banners-row .col-sm-4
+  {
+    display: none;
+  }
+
+  .in-index  .banners-row .col-sm-12
+  {
+  padding:0;
+  }  
+  
 
   .has-detail-product-arrows .carousel-control--product.right:before,
   .has-detail-product-arrows .carousel-control--product.left:before,
