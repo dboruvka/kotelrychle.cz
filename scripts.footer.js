@@ -1,15 +1,27 @@
 $(document).ready(function () {
      $('#signature').append(' &amp; <a href="https://davidboruvka.cz/?utm_source=footer&amp;utm_medium=link&amp;utm_campaign=shoptet" target="_blank" title="Tvorba eshopů na shoptetu">David Borůvka</a>');
 
-  $(".top-nav-button-login").insertBefore($(".cart-count")); // Přesuneme prvek před prvek .cart-count
   
+  if (dataLayer[0].shoptet.pageType === "cart")
+  {
+    $(".top-nav-button-login").remove(); // Přesuneme prvek před prvek .cart-count
+  
+  }
+  else
+  {
+    $(".top-nav-button-login").insertBefore($(".cart-count")); // Přesuneme prvek před prvek .cart-count
+    
+  }  
+  
+
+
 
   $(".top-navigation-contacts").remove();
   
   //$(".top-navigation-bar-menu > li").addClass("cropped");
    $(".top-navigation-bar-menu > li").removeClass("cropped");
    $(".top-navigation-bar-menu-helper  > li").removeClass("cropped");
-  $(".top-navigation-bar-menu > li:gt(2)").addClass("cropped");
+  $(".top-navigation-bar-menu > li:gt(5)").addClass("cropped");
 
 
 // Procházíme všechny elementy v top-navigation-bar-menu ul li a
@@ -57,7 +69,23 @@ $('ul.top-navigation-bar-menu li').each(function() {
   if (dataLayer[0].shoptet.pageType === "productDetail") 
   
   {
-    // detail produktu
+    // $(".products-additional .p-in-in a").each(function() {
+
+    //   var originalText = $(this).text();
+    //   originalText += "…"; // Přidáme tři tečky, pokud byl text zkrácen
+        
+    //   $(this).text(originalText);
+
+    // });      
+    $(".products-additional .p-in-in a").each(function() {
+      var originalText = $(this).text().trim();
+      var truncatedText = originalText.substring(0, 57); // Omezíme text
+      if (originalText.length > 57) {
+        truncatedText += "…" // Přidáme tři tečky, pokud byl text zkrácen
+      }
+      $(this).text(truncatedText);
+    });
+
 
     if ($(".p-final-price-wrapper .price-save").length)
   {
