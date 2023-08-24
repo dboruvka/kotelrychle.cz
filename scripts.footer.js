@@ -256,10 +256,10 @@ $("span.flag-custom2:contains('Český produkt')").insertAfter(".detail-parametr
 
     
   $(".welcome-wrapper h1").remove();
-  $(".in-index .banners-row .col-sm-4").remove();
+    // $(".in-index .banners-row .col-sm-4").remove();
 
-  $(".in-index .banners-row .col-sm-8").removeClass("col-sm-8").addClass("col-sm-12");
-  
+    // $(".in-index .banners-row .col-sm-8").removeClass("col-sm-8").addClass("col-sm-12");
+    
   
 
     
