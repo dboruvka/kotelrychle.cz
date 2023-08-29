@@ -1,23 +1,11 @@
 ﻿@media (max-width: 767px) 
     {
 
-    #productsAlternative
-    {
-        padding-top: 0;
-    }
-
-#productsAlternative .products-block>div
-{
-width: 100%;
-padding-right: 2rem;
-
-}
-
-
-#productsAlternative   .products-block.products .p .name
-{
-height: 40px;;
-}
+        .flag.flag-discount
+        {
+            height: 20px !important;
+        }
+        
 
 
 }
