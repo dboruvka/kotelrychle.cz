@@ -74,6 +74,8 @@ $('ul.top-navigation-bar-menu li').each(function() {
   
   {
   
+    $('.p-image .flag-freeshipping').appendTo('.p-detail-info .flags'); // doprava zdarma
+
 //    $(".p-detail-info .flags").before($(".flag-freeshipping"));
   
     // $(".products-additional .p-in-in a").each(function() {
@@ -179,7 +181,7 @@ $('ul.top-navigation-bar-menu li').each(function() {
   
 
     $("#productsAlternative .products div").removeClass("inactive").addClass("active"); //podobné 
-
+    $("#productsAlternative .products div").removeClass("related-sm-screen-hide") //pro mobilní zobrazení
     
 
     
@@ -280,6 +282,12 @@ $("span.flag-custom2:contains('Český produkt')").insertAfter(".detail-parametr
     // $(".in-index .banners-row .col-sm-8").removeClass("col-sm-8").addClass("col-sm-12");
     
   
+    
+    $(".flags-extra .flag-freeshipping").each(function() { // 
+      
+      var remove = $(this).closest(".p").find(".flags-default");
+      $(this).insertBefore(remove)
+    });
 
     
   $("span.flag-custom2:contains('Český produkt')").each(function() {
@@ -306,6 +314,13 @@ $("span.flag-custom2:contains('Český produkt')").insertAfter(".detail-parametr
   if (dataLayer[0].shoptet.pageType === "category") {
 
 
+    
+    $(".flags-extra .flag-freeshipping").each(function() { // 
+      
+      var remove = $(this).closest(".p").find(".flags-default");
+      $(this).insertBefore(remove)
+    });
+  
 
     
 $("span.flag-custom2:contains('Český produkt')").each(function() {

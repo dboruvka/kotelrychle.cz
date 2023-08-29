@@ -1,7 +1,9 @@
   $(document).ready(function () {
 
 
-    $('.p-image .flag-freeshipping').appendTo('.p-detail-info .flags');
+    //$('.flags-extra .flag-freeshipping').appendTo('.flags-default'); // doprava zdarma
+
+    $("#productsAlternative .products div").removeClass("related-sm-screen-hide") //podobné 
 
   
   });
