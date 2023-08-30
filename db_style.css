@@ -32,7 +32,7 @@
     z-index: 100;
   }
 
-  .flag.flag-discount
+.p-image .flag.flag-discount
   {
       background-color:#00739e;
       font-size:13px;
@@ -1505,12 +1505,23 @@ top: 25px;
     height: 40px;
     }
 
-    .flag.flag-discount
-    {
-        /* height: 25px !important; */
-        margin-bottom:10px !important;
-    }
   
+
+.flag-discount .price-standard
+{
+  margin-right:1.2rem !important;
+}
+
+.in-index .flag.flag-discount,
+.type-category .flag.flag-discount
+
+{
+        height: 25px !important;
+        margin-bottom:20px !important;
+        position: relative !important;
+        float: right !important;
+        min-width: 190px !important;
+    }
 
 
     /* .responsive-tools>a[data-target="search"]
