@@ -121,12 +121,7 @@ top: 25px;
     color: var(--db-primary);
   }
 
-  .flags-extra
-  {
-    top: 2px;
-    right:15px;
-
-  }
+  
 
   [class~=blog-hp]:before
   {
@@ -1211,6 +1206,13 @@ top: 25px;
   @media (min-width: 768px)
   {
 
+    .flags-extra
+    {
+      top: 2px;
+      right:15px;
+  
+    }
+
     #content .btn.unveil-button
     {
     
@@ -1484,6 +1486,12 @@ top: 25px;
         padding-top: 0;
     }
   
+  
+    .columns-mobile-2 .products-block>div /* snad to ovlivní jenom doporučujeme dokoupit */
+    {
+      width: 100%;  
+    }
+  
     #productsAlternative .products-block>div
     {
     width: 100%;
@@ -1494,12 +1502,13 @@ top: 25px;
     
     #productsAlternative   .products-block.products .p .name
     {
-    height: 40px;;
+    height: 40px;
     }
 
     .flag.flag-discount
     {
-        height: 35px !important;
+        /* height: 25px !important; */
+        margin-bottom:10px !important;
     }
   
 
