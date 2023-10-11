@@ -1,11 +1,30 @@
-﻿@media (max-width: 767px) 
-    {
-
-        .flag.flag-discount
-        {
-            height: 25px !important;
-        }
-        
+﻿
+@media (min-width: 1440px) {
+    .container {
+        --container-size: 1440px;
+    }
+}
 
 
+.navigation-in>ul>li.ext>ul>li>div>ul>li>a
+{
+  font-size: 140px !important;
+}
+
+
+@media (min-width: 768px) {
+
+.navigation-in
+{
+  font-size: 18px;
+ 
+
+}
+
+.navigation-buttons a[data-target="login"],
+.header-top .btn.cart-count
+{
+    font-size:20px;
+  }
+  
 }
