@@ -7,6 +7,8 @@
 
 /* obecné  */
 
+
+
 .welcome-wrapper h1
 {
   display: none;
@@ -205,6 +207,12 @@ h4.homepage-group-title, .h4.homepage-group-title
 
 /*detail  a kategorie  */
 
+
+.filter-sections
+{
+  padding-left:0;
+  
+}
 
 
 .detail-parametrs-wrapper
@@ -530,7 +538,13 @@ margin-bottom: 0;
 
       
 
-.st-subcats .subcategories li a {
+      .subcategories li
+      {
+      line-height:19px;
+      }
+      
+
+      .st-subcats .subcategories li a {
 /*.st-subcats možná */
   display: flex;
   flex-direction: row;
@@ -563,7 +577,7 @@ margin-bottom: 0;
 
   .category-top h4 
   {
-    font-size: 18px ;
+    font-size: 22px;
   }
 
 
