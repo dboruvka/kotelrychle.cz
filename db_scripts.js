@@ -314,13 +314,21 @@ $("span.flag-custom2:contains('Český produkt')").insertAfter(".detail-parametr
   if (dataLayer[0].shoptet.pageType === "category") {
 
 
-    
+        
     $(".flags-extra .flag-freeshipping").each(function() { // 
       
       var remove = $(this).closest(".p").find(".flags-default");
-      $(this).insertBefore(remove)
+      //$(this).insertBefore(remove)
+      $(this).appendTo(remove)
+      
+      
     });
   
+
+  
+
+  
+    
 
     
 $("span.flag-custom2:contains('Český produkt')").each(function() {
