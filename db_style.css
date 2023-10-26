@@ -1862,8 +1862,8 @@ font-size:150%;
 
 .p-image-wrapper .flags-extra .flag
 {
-  width:85px;
-  height: 85px;
+  width:92px !important;
+  height: 92px !important;
 
 }
 
@@ -2189,9 +2189,9 @@ padding-left:1em;
     background-color: transparent;
   }
 
-  .p-short-description
+  .p-short-description p
   {
-    font-size: 16px;
+    font-size: 16px !important;
     margin-top:1em;
   }
 
