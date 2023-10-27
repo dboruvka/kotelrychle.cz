@@ -2,6 +2,12 @@ $(document).ready(function () {
      $('#signature').append(' &amp; <a href="https://davidboruvka.cz/?utm_source=footer&amp;utm_medium=link&amp;utm_campaign=shoptet" target="_blank" title="Tvorba eshopů na shoptetu">David Borůvka</a>');
 
 
+
+
+
+     
+
+
      $(".flag-freeshipping span.flag-text ").text("Doprava zdarma");
 
 
@@ -88,8 +94,8 @@ $('ul.top-navigation-bar-menu li').each(function() {
     // });      
     $(".products-additional .p-in-in a").each(function() {
       var originalText = $(this).text().trim();
-      var truncatedText = originalText.substring(0, 57); // Omezíme text
-      if (originalText.length > 57) {
+      var truncatedText = originalText.substring(0, 50); // Omezíme text
+      if (originalText.length > 50) {
         truncatedText += "…" // Přidáme tři tečky, pokud byl text zkrácen
       }
       $(this).text(truncatedText).attr("title", originalText);
@@ -283,13 +289,11 @@ $("span.flag-custom2:contains('Český produkt')").insertAfter(".detail-parametr
     
   
     
-    $(".flags-extra .flag-freeshipping").each(function() { // 
-      
-      var remove = $(this).closest(".p").find(".flags-default");
-      $(this).insertBefore(remove)
-    });
-
     
+    
+
+
+
   $("span.flag-custom2:contains('Český produkt')").each(function() {
         var flag_remove = $(this).closest(".product").find(".p-in-in");
       $(this).insertAfter(flag_remove).removeClass("flag").text("Český výrobek");
@@ -310,36 +314,290 @@ $("span.flag-custom2:contains('Český produkt')").insertAfter(".detail-parametr
 
     
 
+      if ( (dataLayer[0].shoptet.pageType === "category")   ||  (dataLayer[0].shoptet.pageType === "homepage") )
+      
+        {
+      
+          var cat = dataLayer[0].shoptet.pageType;
+
+
+
+          $(".flags-extra .flag-discount").each(function() { 
+      
+            if (cat === "category")
+            {
+              var price_standard = $(this).closest(".p").find(".price-standard").text();
+          
+            }
+            else
+            {
+              var price_standard = $(this).closest(".product").find(".price-standard").text();
+              
+            }
+
+
+          
+            var price_standard_number =  price_standard.replace(",", "."); // změní string na číslo
+             price_standard_number = price_standard_number.replace(/[^0-9.]/g, "");  
+
+             if (cat === "category")
+             {
+              var price = $(this).closest(".p").find(".price-final strong").text();
+             }
+             else
+             {
+              var price = $(this).closest(".product").find(".price-final strong").text();
+
+            }
+ 
+
+            
+
+            var price_number =  price.replace(",", "."); // změní string na číslo
+            price_number = price_number.replace(/[^0-9.]/g, "");  
+           
+         //  alert(price_standard_number);
+       // šlo by přepsat na funkci
+           if (price.includes('Kč')) {
+               var mena = "CZK"
+           } else if (price.includes('€')) {
+             var mena = "EUR"
+           } else {
+               console.log('Řetězec neobsahuje ani Kč ani €');
+           }
+       
+            var usetreno =   price_standard_number - price_number;
+           
+            
+       
+            if (usetreno < 1000 &&  mena == "CZK" )
+            {
+              usetreno = usetreno.toFixed(2);
+            
+            }
+            else if (usetreno >= 1000 &&  mena == "CZK" )
+            {
+              usetreno = usetreno.toFixed(0);
+            
+            }
+            else if (usetreno > 100 &&  mena == "EUR" )
+            {
+              usetreno = usetreno.toFixed(0);
+            
+            } 
+            else if (usetreno <= 100 &&  mena == "EUR" )
+            {
+            
+              usetreno = usetreno.toFixed(2);
+            } 
+            else
+            {
+              usetreno = usetreno.toFixed(2);
+        
+            }
+            
+            usetreno = usetreno.split(/(?=(?:\d{3})+(?:\.|$))/g).join(' '); // naformátuje mezery
+            
+            
+            if (mena == "CZK" )
+            {
+             mena = "Kč";
+             usetreno_text = '<span class="usetreno"> Ušetříte '+usetreno+ " " +mena+ '</span>';
+             usetreno_flag = '<span class="usetreno-flag"> Ušetříte <br>'+usetreno+ " " +mena+ '</span>';
+           }
+            else if (mena == "EUR" )
+            {
+             mena = "€";
+                 usetreno_text = '<span class="usetreno"> Ušetříte '+mena+ +usetreno+ '</span>';
+                 usetreno_flag = '<span class="usetreno-flag"> Ušetříte <br>'+mena+ +usetreno+ '</span>';        
+            }
+            usetreno_text =  usetreno_text.replace(".", ","); // změní string na číslo
+            usetreno_flag =  usetreno_flag.replace(".", ","); // změní string na číslo   
+         
+            //$(".p-info-wrapper .p-final-price-wrapper > span.price-standard").before(usetreno_text);
+          
+
+            if (cat === "category")
+            {
+              $(this).closest(".p").find(".price-standard > span").remove();
+              $(this).closest(".p").find(".price-save").remove();
+              
+              $(this).closest(".p").find(".price-standard").before(usetreno_flag);
+            
+  
+            }
+            else
+            {
+              $(this).closest(".product").find(".price-standard > span").remove();
+              $(this).closest(".product").find(".price-save").remove();
+              
+              $(this).closest(".product").find(".price-standard").before(usetreno_flag);
+            
+  
+
+           }
+
+
+
+
+             
+           });
+       
+       
+       
+
+           $(".flags-extra .flag-freeshipping").each(function() { // 
+      
+            var remove = $(this).closest(".p").find(".flags-default");
+            //$(this).insertBefore(remove)
+            $(this).appendTo(remove); // doprava zdarma
+          });
+      
+
+
+
+
+        }
+
+
 
   if (dataLayer[0].shoptet.pageType === "category") {
 
+    
+  
+      $('.category-perex').each(function() {
+          var lines = $(this).find('p, ul > li, h1, h2, h3');
+          if (lines.length > 3) {
+              lines.slice(3).wrap('<div class="hidden-line"></div>');
+              $(this).append('<div class="read-more">Zobrazit více</div>');
+          }
+      });
+  
+      $('.read-more').click(function() {
+        //$('.category-perex').find('.hidden-line').show();
+        $('.hidden-line').css("display", "block");
+          $(this).remove();
+      });
+  
+  
+  
+           //if ($('#footer > div > div.container.footer-rows > div.benefitBanner.position--benefitCategory').length) 
+     
+     if ($("#footer .conteiner-max-width  .footer-rows .benefitBanner").length)
+     {
+      
+      
 
+      $('#footer .conteiner-max-width  .footer-rows .benefitBanner .benefitBanner__item:nth-child(1) img').each(function() {         
         
-    $(".flags-extra .flag-freeshipping").each(function() { // 
+        if($(this).attr('src').indexOf('zbozi_rozumime') != -1) {
+         $(this).attr('src', '/user/documents/upload/__nemazat__/footer_zbozi_rozumime.png?=1.01');
+      }
+      });
       
-      var remove = $(this).closest(".p").find(".flags-default");
-      //$(this).insertBefore(remove)
-      $(this).appendTo(remove)
+
+
+      $('#footer .conteiner-max-width  .footer-rows .benefitBanner .benefitBanner__item:nth-child(2) img').each(function() {         
+        
+        if($(this).attr('src').indexOf('siroky_sortiment') != -1) {
+         $(this).attr('src', '/user/documents/upload/__nemazat__/footer_siroky_sortiment.png?=1.01');
+      }
+      });
       
-      
+
+      $('#footer .conteiner-max-width  .footer-rows .benefitBanner .benefitBanner__item:nth-child(3) img').each(function() {         
+        
+        if($(this).attr('src').indexOf('renomovani_vyrobci') != -1) {
+         $(this).attr('src', '/user/documents/upload/__nemazat__/footer_renomovani_vyrobci.png?=1.01');
+      }
+      });
+      $('#footer .conteiner-max-width  .footer-rows .benefitBanner .benefitBanner__item:nth-child(4) img').each(function() {         
+                if($(this).attr('src').indexOf('doprava_zbozi') != -1) {
+          $(this).attr('src', '/user/documents/upload/__nemazat__/footer_doprava_zbozi.png?=1.01');
+      }
     });
-  
-
-  
-
-  
     
 
+  } 
+  
+
+
+
+
+  
+
+
+    // if($('body.vetsinez').length){
+    //   $('#textkonfig tr').each(function(){
+    //       $(this).attr('data-height', $(this).height());
+    //       var finddataheight = $(this).attr('data-height');
+    //       if(finddataheight > 161){
+    //          // console.log("mám to")
+    //           $(this).find('td').append('<div class="text-center"><p class="showmoreopen">Zobrazit více</p></div>');
+    //           $(this).find('td div.surcharge-parameter').addClass('showmore');
+    //       }
+    //   });
+    //   }
+      
+
+
+
+      
+      //  var readMore = $('<span>').addClass('read-more').text('Číst více');
+      //  $('.category-perex').append(readMore);
+  
+      // $$('.category-perex').on('click', function() {
+      //     $(this).css('-webkit-line-clamp', 'unset');
+      //     $(this).find('.read-more').css('display', 'none');
+      // });
+
+
+      // function zobrazTřiPrvky(perex) {
+      //   var lines = perex.split("\n");
+      //   var html = "";
+      //   for (var i = 0; i < lines.length; i++) {
+      //     if (i === 0 && lines[i].match(/<ul>/)) {
+      //       html += lines[i].slice(4);
+      //     } else {
+      //       html += lines[i] + "\n";
+      //     }
+      //   }
+      //   if (html.length > 0) {
+      //     html += "<a href=\"#\">číst více</a>";
+      //   }
+      //   return html;
+      // }
+      
+      // document.querySelectorAll(".category-perex").forEach(function(perex) {
+      //   perex.innerHTML = zobrazTřiPrvky(perex.textContent);
+      // });
+      
+      
+  
+
+
+      $(".flags-extra .flag-freeshipping").each(function() { // 
+      
+        var remove = $(this).closest(".p").find(".flags-default");
+        $(this).insertBefore(remove)
+      });
+  
+
+
+  
     
 $("span.flag-custom2:contains('Český produkt')").each(function() {
     var flag_remove = $(this).closest(".product").find(".p-in-in");
   $(this).insertAfter(flag_remove).removeClass("flag").text("Český výrobek");
+
 });
 
 $(".product .ratings-wrapper").each(function() { // přesuň hvězdíčky nad nadpis
   var remove = $(this).closest(".product").find(".p-in-in");
   $(this).insertBefore(remove)
 });
+
+
 
 
 

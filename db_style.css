@@ -5,7 +5,44 @@
   }
   
 
+  .in-index .latest-contribution-box /* komentáře */
+  {
+    display: none;
+  }
+
+
+  .hidden-line
+  {
+    display: none;
+  }
+  .read-more
+  {
+    text-decoration: underline;
+    
+  }
+
 /* obecné  */
+
+
+/* .category-perex {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+.read-more {
+  display: none;
+} */
+
+
+
+.p-short-description p
+  {
+    font-size: 16px !important;
+    margin-top:1em;
+  }
+
 
 .products-block .p-bottom .p-desc
 /* může zlobit  - zvětší výšku popisu produktu*/
@@ -456,6 +493,7 @@ font-size:15px;
 justify-content:flex-start;
 align-items: center;
 padding-top:5px;
+padding-right:1px;
 }
 
 
@@ -1860,7 +1898,7 @@ font-size:150%;
 /* horní kontakty */
 
 
-.p-image-wrapper .flags-extra .flag
+ .flags-extra .flag
 {
   width:92px !important;
   height: 92px !important;
@@ -2189,12 +2227,7 @@ padding-left:1em;
     background-color: transparent;
   }
 
-  .p-short-description p
-  {
-    font-size: 16px !important;
-    margin-top:1em;
-  }
-
+  
   
 
   .price-final-wrapper
