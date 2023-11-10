@@ -21,22 +21,6 @@
     
   }
 
-/* obecné  */
-
-
-/* .category-perex {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;  
-  overflow: hidden;
-}
-
-.read-more {
-  display: none;
-} */
-
-
-
 .p-short-description p
   {
     font-size: 16px !important;
@@ -244,7 +228,7 @@ h4.homepage-group-title, .h4.homepage-group-title
 
 /* Menu */
 
-
+/* vloženo do html
 
 .navigation-in>ul>li.ext>ul>li>div>ul>li>a
 {
@@ -259,13 +243,7 @@ h4.homepage-group-title, .h4.homepage-group-title
 
 }
 
-/* .navigation-in ul.menu-level-2 li
-{
-  border-right: 1px solid  rgb(185, 185, 185);
-} */
-
-/*detail  a kategorie  */
-
+*/
 
 .filter-sections
 {
@@ -1391,7 +1369,7 @@ font-size: 22px;
     
             }  
 
-/*  navigace */
+/*  navigace 
 #navigation
 {
   height: 48px;
@@ -1409,14 +1387,7 @@ font-size: 22px;
         font-size: 18px;
         line-height:30px;
       }
-
-        /* .fitted .navigation-in ul.menu-level-1
-        {
-          justify-content: space-around;
-        } */
-
-        /* logo*/
-        
+     
 
         .sticky-mobile:not(.ordering-process) #header .site-name img
         {
@@ -1447,7 +1418,7 @@ font-size: 22px;
         max-height:100px;
       }
 
-      /* přihlášení */
+      /* přihlášení 
       .navigation-buttons
       {
         margin-left: 60px !important;
@@ -1501,7 +1472,7 @@ font-size: 22px;
     
     
     
-    /* hlavička - konec */
+     hlavička - konec */
     
       
     
@@ -1585,15 +1556,6 @@ font-size: 22px;
 
     /* navigace - košík*/
 
-.navigation-buttons a[data-target="cart"]
-{
-  color: black;
-  font-weight: bold;
-}
-
-.btn.cart-count::before, a.btn.cart-count::before {
-          content: url(kosik.svg);
-        }
 
 
 /* content    */
@@ -1786,31 +1748,9 @@ margin-right:1.2rem !important;
 visibility: hidden;
 } */
 
-.responsive-tools>a[data-target="navigation"]::before
-{
-  color:black;
-  background-color: transparent;
-}
 
 
-.responsive-tools>a[data-target="navigation"]::before
-{
-border-radius: unset;
-font-size:150%;
-}
 
-.responsive-tools>a::before
-{
-  width: 40px;
-  line-height: 40px;
-}
-
-#header .site-name img
-{
-  padding-bottom:0 !important;
-  max-width: 145px !important;
-  margin-top: 10px !important;
-}
 
 /* navigace*/
 
@@ -1897,6 +1837,7 @@ font-size:150%;
 {
 /* horní kontakty */
 
+/*
 
  .flags-extra .flag
 {
@@ -1975,7 +1916,7 @@ border: 0px solid green;
     margin-right:0;
   } 
 
-
+*/
   /* .top-navigation-bar .container>div:first-child
   {
     flex-grow: 1;
@@ -2114,12 +2055,7 @@ padding: 0 !important;
     padding-bottom: 5px;
   }
   
-  #header .site-name img /* loho */
-  {
-    padding-bottom:0 !important;
-    max-width: 145px !important;
-    margin-top: 0px !important;
-  }
+  
 
   #footer .footer-bottom
   {
