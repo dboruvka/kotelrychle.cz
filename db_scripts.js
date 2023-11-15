@@ -197,10 +197,14 @@ $('ul.top-navigation-bar-menu li').each(function() {
       .contents()
       .wrapAll('<div class="p-info-wrapper-bg"></div>');
     
+      
+      
+      
       if ($(".desktop").length) //desktop
       {
+        
         $("h1").insertBefore($(".p-final-price-wrapper")); // přesune  nadpis do pravé části
-        $(".stars-wrapper").insertAfter("h1:first-child");
+          $(".p-detail-info .stars-wrapper").insertAfter("h1:first-child");
       }
       else
       {
