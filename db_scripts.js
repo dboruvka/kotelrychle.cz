@@ -204,11 +204,11 @@ $('ul.top-navigation-bar-menu li').each(function() {
       {
         
         $("h1").insertBefore($(".p-final-price-wrapper")); // přesune  nadpis do pravé části
-          $(".p-detail-info .stars-wrapper").insertAfter("h1:first-child");
+        $(".p-detail-info .stars-wrapper").insertAfter("h1:first-child");
       }
       else
       {
-        $(".stars-wrapper").insertAfter(".p-image-wrapper");
+        $(" .p-detail-info .stars-wrapper").insertAfter(".p-image-wrapper");
 //          $(".p-detail-tabs ul").removeClass("active");
  
   $("#p-detail-tabs > li.shp-tab").removeClass("active");
@@ -427,6 +427,14 @@ $("span.flag-custom2:contains('Český produkt')").insertAfter(".detail-parametr
               $(this).closest(".p").find(".price-save").remove();
               
               $(this).closest(".p").find(".price-standard").before(usetreno_flag);
+          
+              
+              document.addEventListener('ShoptetDOMPageContentLoaded', function () {
+                $(this).closest(".p").find(".price-standard > span").remove();
+                $(this).closest(".p").find(".price-save").remove();                
+                $(this).closest(".p").find(".price-standard").before(usetreno_flag);
+  
+            });
             
   
             }
@@ -442,7 +450,7 @@ $("span.flag-custom2:contains('Český produkt')").insertAfter(".detail-parametr
            }
 
 
-
+          
 
              
            });
@@ -595,6 +603,24 @@ $("span.flag-custom2:contains('Český produkt')").each(function() {
   $(this).insertAfter(flag_remove).removeClass("flag").text("Český výrobek");
 
 });
+
+document.addEventListener('ShoptetDOMPageContentLoaded', function () {
+  $("span.flag-custom2:contains('Český produkt')").each(function() {
+    var flag_remove = $(this).closest(".product").find(".p-in-in");
+  $(this).insertAfter(flag_remove).removeClass("flag").text("Český výrobek");
+
+});
+});
+ 
+document.addEventListener('ShoptetDOMPageMoreProductsLoaded', function () {
+  $("span.flag-custom2:contains('Český produkt')").each(function() {
+    var flag_remove = $(this).closest(".product").find(".p-in-in");
+  $(this).insertAfter(flag_remove).removeClass("flag").text("Český výrobek");
+
+});
+ });
+
+
 
 $(".product .ratings-wrapper").each(function() { // přesuň hvězdíčky nad nadpis
   var remove = $(this).closest(".product").find(".p-in-in");
