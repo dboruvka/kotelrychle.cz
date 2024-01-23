@@ -2,7 +2,27 @@ $(document).ready(function () {
      $('#signature').append(' &amp; <a href="https://davidboruvka.cz/?utm_source=footer&amp;utm_medium=link&amp;utm_campaign=shoptet" target="_blank" title="Tvorba eshopů na shoptetu">David Borůvka</a>');
 
 
-
+     function do_kosiku() {
+    
+      $(".products-block .availability").each(function () {
+          $(this).closest(".product").find(".p-bottom > div").append(this);
+      });
+      $( ".products-block .availability + .availability, .p-tools > .availability").remove();
+      $(".products-block .p-tools").each(function () {
+          $(this).closest(".product").find(".p-bottom").append(this);
+      });
+      $(
+          '<span class="quantity"><input type="text" name="amount" value="1" class="amount" autocomplete="off" data-decimals="0" data-max="9999" data-min="1"><span class="increase" title="Zvýšit množství"></span><span class="decrease" title="Snížit množství"></span></span>'
+      ).prependTo(".products-block .pr-action");
+      
+  
+    }
+    
+    do_kosiku();
+  
+    document.addEventListener('ShoptetDOMPageContentLoaded', function () {
+         do_kosiku();
+  });
 
 
      
@@ -13,6 +33,8 @@ $(document).ready(function () {
 
   if (dataLayer[0].shoptet.pageType === "cart")
   {
+  
+    $(".in-kosik .cart-summary h4").text("Slevový kód");  
     $(".top-nav-button-login").remove(); 
     
   
@@ -211,12 +233,13 @@ $('ul.top-navigation-bar-menu li').each(function() {
         $(" .p-detail-info .stars-wrapper").insertAfter(".p-image-wrapper");
 //          $(".p-detail-tabs ul").removeClass("active");
  
-  $("#p-detail-tabs > li.shp-tab").removeClass("active");
-  $("#tab-content > div").removeClass("active");
+  //$("#p-detail-tabs > li.shp-tab").removeClass("active");
+    $(".shp-tabs-holder li:first").addClass("active");
+  
   $(".products-additional.p-switchable > div:nth-child(3)").removeClass("related-sm-screen-hide");
   $(".products-additional.p-switchable > div:nth-child(4)").removeClass("related-sm-screen-hide");
   
-
+  //shp-tab active
   
   
   
@@ -271,11 +294,11 @@ $("span.flag-custom2:contains('Český produkt')").insertAfter(".detail-parametr
     $(".extended-description .detail-parameters").after("<div class='in-web-zaruka'></div>"); // vloží nový div
     $(".in-web-zaruka").load("/in-web/detail-produktu-zaruka-a-servis/ .content-inner .text "); // nahraj článek
     
-       
+    var $detailcontact = $(".type-detail .detail-contact-button");       
     $(".type-detail .detail-contact-button").replaceWith("<div class='in-web-rozumime'></div>");
     $(".in-web-rozumime").load("/in-web/detail-produktu-nasemu-zbozi-rozumime/ .content-inner .text "); // nahraj článek
-    
-    
+    $detailcontact.insertBefore($(".in-web-rozumime"));  
+ 
 
 
     // $(".detail-tabs-wrapper .extended-description").replaceWith('<h4>Technické parametry</h4');  // 
@@ -635,9 +658,10 @@ $(".product .ratings-wrapper").each(function() { // přesuň hvězdíčky nad na
     $(".st-subcats  .subcategories  li").removeClass("col-lg-3").addClass("col-lg-4");
 
     
+    var $detailcontact = $(".type-detail .detail-contact-button");
     $(".type-category .filters-wrapper").after("<div class='in-web-rozumime'></div>");
     $(".in-web-rozumime").load("/in-web/kategorie-nasemu-zbozi-rozumime/ .content-inner .text "); // nahraj článek
-    
+    $detailcontact.insertBefore($(".in-web-rozumime"));  
 
 
 // přidání článků z rubriky in-web do webu
