@@ -1,0 +1,433 @@
+<script id='pixel-script-poptin' src='https://cdn.popt.in/pixel.js?id=46083b53d54af' async='true'></script>
+<style>
+  .btn.btn-conversion, 
+  a.btn.btn-conversion,
+  #checkoutSidebar .toggle-contacts
+  {
+    background-color: var(--db-primary) !important;
+    border-color:  var(--db-primary) !important;
+  }
+
+
+.products-inline.products-top
+  {
+    flex-direction: column;
+
+  }
+  .products-inline.products-top > div .p
+  {
+    flex-direction: row;
+    width: inherit;
+  }    
+  .products-inline.products-top > div .p .image
+{
+  width: 65px;
+  min-height: 65px;
+}
+
+  .products-inline.products-top > div .p .p-in  .availability
+{
+  display: none;
+}
+
+.products-inline > div .p .p-in .p-in-in
+{
+flex-grow: 1;  
+/*calc(100% - 56px)*/
+}
+
+.btn.cart-count::before, a.btn.cart-count::before {
+          content: url(/user/documents/upload/__nemazat__/kosik.svg);
+        }
+
+
+.responsive-tools>a[data-target=search]:before
+{
+font-size:26px;
+color:black;
+transform: rotate(270deg);
+
+}
+
+@media (max-width: 767px) {
+
+
+ .type-category .products-inline.products-top>div
+{
+    display: block 	!important;
+}
+
+#header .site-name img
+{
+  padding-bottom:0 !important;
+  max-width: 145px !important;
+  margin-top: 10px !important;
+}
+
+.responsive-tools>a[data-target="navigation"]::before
+{
+  color:black;
+  background-color: transparent;
+}
+
+
+.responsive-tools>a[data-target="navigation"]::before
+{
+border-radius: unset;
+font-size:150%;
+}
+
+.responsive-tools>a::before
+{
+  width: 40px;
+  line-height: 40px;
+}
+
+.navigation-window-visible a[data-target="search"]
+{
+display:none;
+/* když se zobrazí menu, tak se schová vyhledávání*/
+}
+
+.navigation-window-visible .carousel-control.left, 
+.navigation-window-visible .carousel-control.right
+{
+z-index:0;
+}
+
+/*
+#navigation
+{
+z-index:0 !important;
+}
+*/
+.responsive-tools>a[data-target=search]
+{
+margin-right:90px
+}
+
+
+.toggle-window,
+.responsive-tools > a[data-target="search"]
+/*.header-top*/
+{
+z-index:25000 !important;
+}
+
+}
+.navigation-in>ul>li.ext>ul>li>div>ul>li>a
+{
+  font-size: 14px !important;
+}
+
+.navigation-in>ul>li.ext>ul>li>div>a
+{
+  font-size: 16px !important;
+  color: black;
+  line-height: 1.2;
+
+}
+
+@media (max-width: 480px) { 
+.products-inline.products-top > div .p .p-in
+  {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+    width: calc(100% - 180px);
+  }
+
+#header .site-name img /* logo */
+  {
+    padding-bottom:0 !important;
+    max-width: 145px !important;
+    margin-top: 0px !important;
+  }
+}
+
+@media (min-width: 768px)
+{
+
+  /* vyhledávání  */
+  .compact-form .btn
+  {
+    top:8px;
+    line-height: normal;
+    height: 20px;
+    padding: 0px 10px 0px 10px;
+  }
+
+  #header .js-search-input {
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(123, 123, 123);
+        border-radius: 14px;
+        background-color: rgb(255, 255, 255);
+
+    
+      } 
+
+      
+      #formSearchForm .search-input
+      {
+        background-image: url(/user/documents/upload/__nemazat__/search.png);
+        
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        padding-left: 38px;
+
+      }
+
+
+    #header .search button {
+      background-color: transparent;
+      color: #777777;
+      font-size: 14px;
+      font-weight: bold;
+      /* line-height: 1.2; */
+      text-transform: unset;
+      border:0;
+      border-left: 1px solid;
+    
+            }  
+
+/*  navigace */
+#navigation
+{
+  height: 48px;
+}
+
+  .navigation-in>ul>li
+      {
+        border: 0;
+      }
+
+      .navigation-in
+      {
+        background-color: var(--db-primary);
+        font-weight: bold;
+        font-size: 18px;
+        line-height:30px;
+      }
+     
+
+        .sticky-mobile:not(.ordering-process) #header .site-name img
+        {
+          max-height: 55px;
+        }
+
+        .sticky-mobile:not(.ordering-process)  #header .site-name
+        {
+          margin-top: 5px;
+          height: 80px;
+        }
+        
+        .header-top .site-name-wrapper
+        {
+          flex-basis: 300px !important;
+        }
+                
+
+        .st-big-logo #header .site-name
+        {
+          height: 100px;  
+        }
+        
+        
+        .st-big-logo #header .site-name a img
+      {
+        height: 100px;
+        max-height:100px;
+      }
+
+      /* přihlášení */
+      .navigation-buttons
+      {
+        margin-left: 60px !important;
+        flex-basis:auto !important;
+      }
+      
+      
+      .navigation-buttons>a:not(.cart-count)
+      {
+        display: block;
+      }
+    
+      .navigation-buttons a[data-target="login"]
+      {
+        background-color: transparent;
+        color: black;
+                font-weight: bold;
+        margin-right: 25px;
+
+        }
+      
+
+        .navigation-buttons a[data-target="login"],
+        .header-top .btn.cart-count
+        {
+            font-size:20px;
+          }
+  
+          
+      
+        .navigation-buttons>a:not(.cart-count)
+        {
+          width: auto;
+          height: 52px;
+        }
+
+
+
+.navigation-buttons a[data-target="cart"]
+{
+  color: black;
+  font-weight: bold;
+}
+
+
+
+
+
+
+        .navigation-buttons>a[data-target="login"]::before
+        {
+          
+          content: url(/user/documents/upload/__nemazat__/uzivatel.svg);
+          width: 30px;
+          margin-right:20px;
+          vertical-align:middle;
+          display:inline-block
+        }
+        .navigation-buttons a[data-target="login"]:hover
+        {
+          background-color: transparent;
+          color: var(--db-primary);
+        }
+    
+    
+    
+    /* hlavička - konec */
+}
+
+
+ .flags-extra .flag
+{
+  width:92px !important;
+  height: 92px !important;
+
+}
+
+
+
+.fitted .navigation-in  ul
+{
+  justify-content:flex-start !important;
+}
+
+
+.fitted .navigation-in > ul
+{
+  justify-content:space-evenly !important;
+}
+
+
+.top-navigation-bar 
+{
+border: 0;
+}
+
+.top-navigation-bar-menu li::before
+
+{
+content: none;
+
+}
+.top-navigation-menu
+{
+padding-right: 0;
+}
+
+.top-navigation-bar-menu-helper li a::before, .dropdown-menu li a::before
+{
+background-color: transparent;
+}
+
+.top-navigation-bar a, .top-navigation-bar .dropdown button {
+color:#5d5d5d !important;
+font-weight: bold;
+text-transform: none;
+font-size: 14px;
+
+}
+
+.top-navigation-bar-menu li a, .top-navigation-bar-menu-helper li a
+{
+padding: 2px 10px;
+}
+
+/*
+.top-navigation-bar .container>div:last-child
+{
+flex-basis: 70px !important;
+width: 70px !important;
+border: 0px solid green;
+}
+*/
+
+.top-navigation-bar .container>div:first-child
+  {
+     flex-basis: 99%;
+    width: 99%;
+    padding-right:20px;
+    text-align: right;
+    border: 0px solid red;
+  }
+
+
+  .top-navigation-bar .dropdown
+  {
+    margin-right:0;
+  } 
+</style>
+
+
+==========================
+<script>
+var detailContactButtonTitle = "Máte otázku k danému produktu?";
+var detailContactButtonText = "Radi zodpovieme Vaše otázky.";
+var detailContactButtonLink = "Napíšte nám!"
+
+var detailContactFormAddonIcon = true
+var detailContactFormAddonIconType = "price-1";
+var detailContactFormAddonIconImage = ""
+
+
+if ((window.location.host !== "localhost:3010") && (window.location.host !== "10.0.0.30:3010"))  {
+var script = document.createElement("script");
+//script.src = "https://cdn.myshoptet.com/usr/380023.myshoptet.com/user/documents/webs/kotelrychle.cz/db_scripts.js?v=1.99";
+document.head.appendChild(script);
+}
+</script>
+
+
+
+<link href="https://cdn.myshoptet.com/usr/380023.myshoptet.com/user/documents/webs/kotelrychle.cz/db_style.css?v=2.81" rel="stylesheet">
+<script type="text/javascript" src="https://cdn.myshoptet.com/usr/380023.myshoptet.com/user/documents/webs/kotelrychle.cz/db_scripts.js?v=2.81"></script>
+
+<script type="text/javascript" src="https://c.seznam.cz/js/rc.js"></script>
+<script>
+var retargetingConf = {
+
+rtgId: 153890
+
+};
+
+if (window.rc && window.rc.retargetingHit) {
+
+window.rc.retargetingHit(retargetingConf);
+
+}
+
+</script>
+

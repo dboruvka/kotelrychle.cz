@@ -1,4 +1,38 @@
 $(document).ready(function () {
+
+    function trideni01()
+    {
+        $('.category-header > div:nth-child(2)').remove()
+    
+        var $categoryHeader = $('.category-header');
+        var $selected = $('<div class="selected">Řazení</div>').appendTo($categoryHeader);
+        var $dropdown = $('<div class="dropdown2"></div>').appendTo($categoryHeader);
+        
+        
+        $categoryHeader.find('label').each(function() {
+            
+            $(this).appendTo($dropdown);
+    
+        });
+    
+        
+        $selected.on('click', function() {        
+        
+            $dropdown.toggle();
+        });
+    
+        $dropdown.find('label').on('click', function() {        
+            
+            var text = $(this).text();
+            $selected.text(text);
+            $dropdown.hide();
+        });
+    
+    
+    }
+    
+    
+
      $('#signature').append(' &amp; <a href="https://davidboruvka.cz/?utm_source=footer&amp;utm_medium=link&amp;utm_campaign=shoptet" target="_blank" title="Tvorba eshopů na shoptetu">David Borůvka</a>');
 
 
@@ -348,6 +382,10 @@ $("span.flag-custom2:contains('Český produkt')").insertAfter(".detail-parametr
           var cat = dataLayer[0].shoptet.pageType;
 
 
+          
+
+          
+
 
           $(".flags-extra .flag-discount").each(function() { 
       
@@ -355,6 +393,11 @@ $("span.flag-custom2:contains('Český produkt')").insertAfter(".detail-parametr
             {
               var price_standard = $(this).closest(".p").find(".price-standard").text();
           
+            
+            
+            
+            
+            
             }
             else
             {
@@ -459,7 +502,11 @@ $("span.flag-custom2:contains('Český produkt')").insertAfter(".detail-parametr
   
             });
             
-  
+            
+        
+
+
+            
             }
             else
             {
@@ -497,6 +544,26 @@ $("span.flag-custom2:contains('Český produkt')").insertAfter(".detail-parametr
 
 
   if (dataLayer[0].shoptet.pageType === "category") {
+
+
+
+    var width = $(window).width();
+
+            if (width < 767)
+            {
+              $('.filters-wrapper').insertBefore('#category-header');
+              trideni01();
+              document.addEventListener('ShoptetDOMPageContentLoaded', function () 
+              {
+                  trideni01();
+                  $('.filters-unveil-button-wrapper a').html("Upřesnit parametry");
+                  $('.filters-wrapper').insertBefore('#category-header');
+                });
+  
+               
+               $('.filters-unveil-button-wrapper a').html("Upřesnit parametry");
+    
+              }
 
     
   

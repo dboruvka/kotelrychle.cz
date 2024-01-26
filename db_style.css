@@ -822,8 +822,7 @@ font-size: 22px;
   
 
 }
-
-.breadcrumbs  a
+.breadcrumbs, .breadcrumbs a
 {
   font-size: 15px;
   text-transform: none;
@@ -1020,7 +1019,13 @@ font-weight: normal;
 {
   /* background-color: transparent; */
 font-size: 16px;
-margin-top:20px;
+margin-top:5px;
+}
+
+.sidebar
+{
+  margin-top:0px;
+
 }
 
 
@@ -1042,18 +1047,24 @@ margin:0;
   padding-right:15px;
 }
 
+
+.filter-section
+{
+  padding-bottom:25px;
+}
+
+
 .sidebar-inner
 {
-  padding-left: 0;
-  padding-right: 0;
+padding: 0;
 }
 
-
-.sidebar
+.sidebar-inner>div:first-child,
+.box.box-sm.box-filters
 {
-font-size: 153px;
-margin-top:20px;
+  padding-top: 0;
 }
+
 
 /* .db-az
 {
@@ -1136,7 +1147,7 @@ height:18px;
     {
       font-weight: bold;
       text-transform: unset;
-      font-size: 18px;
+      font-size: 22px;
       color: black;
     }
 
@@ -1477,6 +1488,11 @@ font-size: 22px;
     
     @media (min-width: 1200px) {
 
+      .custom-footer
+      {
+        padding-left:0;
+      }
+
 
       #description .description-inner
       {
@@ -1555,6 +1571,18 @@ font-size: 22px;
 /* hlavička */
 
 @media (max-width: 767px) {
+
+
+
+  .products-inline.products-top>div.button-wrapper
+  {
+      display: block;
+  }
+  
+  .products-top>div.revealed
+  {
+      display: block;   
+  }
 
 
   .category-header input[type="radio"]+label
@@ -2002,6 +2030,99 @@ padding: 0 !important;
 
 @media (max-width: 480px) { 
 
+  .category-header div
+  {
+      text-align: left;
+      
+      display: block;
+  }
+  
+  .category-header {
+        display: block;        
+          border: 1px solid #afafaf;
+          cursor: pointer;
+          position: relative;
+          background-color: #00395d;
+          color: white;
+          font-size: 15px;
+          text-transform: uppercase;
+          
+  
+      }
+  
+      .category-header .selected {
+          height: 40px;
+          line-height: 40px;
+           padding-left: 20px; 
+           
+      }
+  
+  
+      
+      .filters-unveil-button-wrapper a
+      {
+          text-align: left !important;
+      }
+  
+  
+      .filters-unveil-button-wrapper a:after
+      {
+          content: url("kategorie-sipka.png");
+          padding-right:25px;
+          right: 0;    
+          position: absolute;        
+      }
+  
+  
+      .filters-unveil-button-wrapper a:before
+      {
+          content: url("kategorie-filter.png");
+          padding-right:15px;
+      }
+  
+  
+  
+  
+      .category-header .selected::before
+      {
+          content: url("kategorie-razeni.png");
+          padding-right:15px;
+      }
+  
+      .category-header .selected::after
+      {
+          content: url("kategorie-sipka.png");
+          padding-right:15px;
+          right: 0;    
+          position: absolute;
+  
+      }
+  
+  
+  
+      .category-header .dropdown2 {
+          display: none;
+          position: absolute;
+          width: 100%;
+          top: 100%;
+          left: 0;
+          z-index: 10000;
+          color: black;
+          background-color:  #f8f8f8;
+      }
+  
+      .category-header .dropdown2 label {
+          display: block;
+          padding: 10px;
+        font-style: 14px;    
+      
+          /* cursor: pointer; */
+      }
+  
+      .category-header .dropdown2 label:hover {
+      text-decoration:underline;
+      } 
+  
   h1, .h1
   {
     font-size: 26px;
@@ -2014,10 +2135,10 @@ padding: 0 !important;
 
   .products-inline.products-top>div .p::before
   {
-    width: 25px;
-    height: 25px;
+    width: 23px;
+    height: 23px;
     font-size:11px;
-    margin-right:2px;
+    margin-right:5px;
   }
 
   .products-inline.products-top
@@ -2032,13 +2153,26 @@ padding: 0 !important;
       flex:1;
       
 
-  
   }
   
-  .products-inline.products-top > div .p .p-in .p-bottom
+  /* .products-inline.products-top > div .p .p-in .p-bottom
   {
     flex-basis: 90px;
-  }
+  } */
+
+  .products-inline.products-top > div .p .p-in
+  {
+    flex-direction: column;
+}
+
+.products-inline.products-top > div .p .p-in a
+  {
+    white-space: nowrap;  /* Zajišťuje, že text zůstane na jednom řádku */
+    overflow: hidden;     /* Skryje text, který přetéká z elementu */
+    text-overflow: ellipsis; 
+
+    }
+
 
   .products-inline.products-top > div .p .image img
   {
@@ -2046,6 +2180,9 @@ padding: 0 !important;
     height: auto;
     
   }
+
+  
+
   .products-inline.products-top > div .p .p-in
   {
     width: calc(100% - 80px);
@@ -2187,7 +2324,7 @@ padding-left:1em;
 
   .type-product .p-info-wrapper .btn.add-to-cart-button
   {
-    width: 95%;
+    width: 225px;
     margin: auto;
   }
 
