@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $('#productsTop .product.inactive::first-child').css('background-color','red');
+alert(dataLayer[0].shoptet.pageType);
 
         
     
